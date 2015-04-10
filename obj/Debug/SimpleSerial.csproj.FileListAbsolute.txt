@@ -14,3 +14,5 @@ D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.csprojResolveAssemblyReference.ca
 D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.Form1.resources
 D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.Properties.Resources.resources
 D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.csproj.GenerateResource.Cache
+D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.exe
+D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.pdb
