@@ -95,9 +95,10 @@ namespace SimpleSerial
         private void buttonStart_Click(object sender, EventArgs e)
         {
             //Pour s'assurer que tout les cases sont remplies
-            string testBaudRate = serialPort1.BaudRate.ToString();
-            string testDataBits = serialPort1.DataBits.ToString();
-            if (String.IsNullOrEmpty(serialPort1.PortName))
+            string testBaudRate = choixBaurate.Text.ToString();
+            string testDataBits = choixDataBits.Text.ToString();
+            string testPortName = choixPort.Text.ToString();
+            if (String.IsNullOrEmpty(testPortName))
             {
                 MessageBox.Show("Le port est vide", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -116,7 +117,7 @@ namespace SimpleSerial
                         return;
                     }
                     else
-                        serialPort1.PortName = choixPort.Text.ToString();
+            serialPort1.PortName = choixPort.Text.ToString();
             serialPort1.BaudRate = Convert.ToInt32(choixBaurate.Text);
             serialPort1.DataBits = Convert.ToInt16(choixDataBits.Text);
             serialPort1.Open();
