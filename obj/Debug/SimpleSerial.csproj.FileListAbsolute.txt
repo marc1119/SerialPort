@@ -1,0 +1,16 @@
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\obj\Debug\SimpleSerial.exe
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\obj\Debug\SimpleSerial.pdb
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\bin\Debug\SimpleSerial.exe
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\bin\Debug\SimpleSerial.pdb
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\obj\Debug\SimpleSerial.csprojResolveAssemblyReference.cache
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\obj\Debug\SimpleSerial.Form1.resources
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\obj\Debug\SimpleSerial.Properties.Resources.resources
+C:\Users\Marc-Antoine\Desktop\SimpleSerial\obj\Debug\SimpleSerial.csproj.GenerateResource.Cache
+D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.exe
+D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.pdb
+D:\Desktop\SimpleSerial\bin\Debug\SimpleSerial.exe
+D:\Desktop\SimpleSerial\bin\Debug\SimpleSerial.pdb
+D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.csprojResolveAssemblyReference.cache
+D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.Form1.resources
+D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.Properties.Resources.resources
+D:\Desktop\SimpleSerial\obj\Debug\SimpleSerial.csproj.GenerateResource.Cache
