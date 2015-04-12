@@ -21,6 +21,9 @@ C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.pdb
 C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\bin\Debug\SimpleSerial.exe
 C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\bin\Debug\SimpleSerial.pdb
 C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.csprojResolveAssemblyReference.cache
-C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.Form1.resources
 C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.Properties.Resources.resources
 C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.csproj.GenerateResource.Cache
+C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\bin\Debug\fr\SimpleSerial.resources.dll
+C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.PuriSerial.resources
+C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.PuriSerial.fr.resources
+C:\Users\Marc-Antoine\Documents\GitHub\SerialPort\obj\Debug\fr\SimpleSerial.resources.dll

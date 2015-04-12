@@ -17,12 +17,12 @@ using System.IO.Ports;
 
 namespace SimpleSerial
 {
-    public partial class Form1 : Form
+    public partial class PuriSerial : Form
     {
         // variable pour stocker les données
         string RxString;
 
-        public Form1()
+        public PuriSerial()
         {
             InitializeComponent();
 
@@ -130,9 +130,6 @@ namespace SimpleSerial
             {
                 boutonDemarrer.Enabled = false;
                 boutonArret.Enabled = true;
-                textBox1Min.ReadOnly = false;
-                textBox10Min.ReadOnly = false;
-                textBox1Hr.ReadOnly = false;
                 textBoxTempsReel.ReadOnly = false;
             }
         }
@@ -150,14 +147,19 @@ namespace SimpleSerial
                 serialPort1.Close();
                 boutonDemarrer.Enabled = true;
                 boutonArret.Enabled = false;
-                textBox1Min.ReadOnly = true;
+                textBoxTempsReel.ReadOnly = true;
+
             }
         }
 
         //bouton effacer
         private void effacer_Click(object sender, EventArgs e)
         {
-            textBox1Min.Clear();
+            textBoxTempsReel.Clear();
+            list1Min.Clear();
+            list10Min.Clear();
+            list1Heure.Clear();
+            listTempsReel.Clear();
         }
 
         //bouton quitter
@@ -169,25 +171,12 @@ namespace SimpleSerial
         
 
         //Les textBox
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
+        
 
         //La barre de progression
         private void progressBar1_Click(object sender, EventArgs e)
@@ -217,7 +206,6 @@ namespace SimpleSerial
         private void timer1_Tick(object sender, EventArgs e)
         {
             //Pour 1 minutes
-            textBox1Min.AppendText(RxString);
             timer1Min.Stop();
             timer1Min.Start();
         }
@@ -225,7 +213,6 @@ namespace SimpleSerial
         private void timer10Min_Tick(object sender, EventArgs e)
         {
             //Pour 10 minutes
-            textBox1Hr.AppendText(RxString);
             timer10Min.Stop();
             timer10Min.Start();
         }
@@ -233,7 +220,6 @@ namespace SimpleSerial
         private void timer1Hr_Tick(object sender, EventArgs e)
         {
             //Pour 1 heure
-            textBox1Hr.AppendText(RxString);
             timer1Min.Stop();
             timer1Min.Start();
         }
@@ -274,11 +260,6 @@ namespace SimpleSerial
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void baudRate_Click(object sender, EventArgs e)
         {
 
@@ -295,6 +276,26 @@ namespace SimpleSerial
         }
 
         private void temp1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void list1Min_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void list10Min_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void list1Heure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }

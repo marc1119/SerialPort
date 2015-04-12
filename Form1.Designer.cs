@@ -8,7 +8,7 @@ Id: Form1.Designer.cs
 
 namespace SimpleSerial
 {
-    partial class Form1
+    partial class PuriSerial
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@ namespace SimpleSerial
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PuriSerial));
             this.boutonDemarrer = new System.Windows.Forms.Button();
             this.boutonArret = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
@@ -56,43 +57,63 @@ namespace SimpleSerial
             this.choixPort = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1Min = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.textBox10Min = new System.Windows.Forms.TextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1Hr = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tab1Min = new System.Windows.Forms.TabPage();
+            this.list1Min = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tab10Min = new System.Windows.Forms.TabPage();
+            this.list10Min = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tab1Hr = new System.Windows.Forms.TabPage();
+            this.list1Heure = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabTempsReel = new System.Windows.Forms.TabPage();
+            this.listTempsReel = new System.Windows.Forms.ListView();
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabTest = new System.Windows.Forms.TabPage();
             this.textBoxTempsReel = new System.Windows.Forms.TextBox();
             this.timer1Min = new System.Windows.Forms.Timer(this.components);
             this.timer10Min = new System.Windows.Forms.Timer(this.components);
             this.timer1Hr = new System.Windows.Forms.Timer(this.components);
             this.baudRate = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tab1Min.SuspendLayout();
+            this.tab10Min.SuspendLayout();
+            this.tab1Hr.SuspendLayout();
+            this.tabTempsReel.SuspendLayout();
+            this.tabTest.SuspendLayout();
             this.SuspendLayout();
             // 
             // boutonDemarrer
             // 
-            this.boutonDemarrer.Location = new System.Drawing.Point(485, 42);
+            resources.ApplyResources(this.boutonDemarrer, "boutonDemarrer");
             this.boutonDemarrer.Name = "boutonDemarrer";
-            this.boutonDemarrer.Size = new System.Drawing.Size(77, 31);
-            this.boutonDemarrer.TabIndex = 0;
-            this.boutonDemarrer.Text = "Démarrer";
             this.boutonDemarrer.UseVisualStyleBackColor = true;
             this.boutonDemarrer.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // boutonArret
             // 
-            this.boutonArret.Enabled = false;
-            this.boutonArret.Location = new System.Drawing.Point(485, 97);
+            resources.ApplyResources(this.boutonArret, "boutonArret");
             this.boutonArret.Name = "boutonArret";
-            this.boutonArret.Size = new System.Drawing.Size(77, 32);
-            this.boutonArret.TabIndex = 1;
-            this.boutonArret.Text = "Arrêt";
             this.boutonArret.UseVisualStyleBackColor = true;
             this.boutonArret.Click += new System.EventHandler(this.buttonStop_Click);
             // 
@@ -103,134 +124,98 @@ namespace SimpleSerial
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(38, 127);
+            resources.ApplyResources(this.progressBar1, "progressBar1");
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(259, 13);
-            this.progressBar1.TabIndex = 60;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // temperature2
             // 
-            this.temperature2.Location = new System.Drawing.Point(136, 95);
+            resources.ApplyResources(this.temperature2, "temperature2");
             this.temperature2.Name = "temperature2";
-            this.temperature2.Size = new System.Drawing.Size(92, 20);
-            this.temperature2.TabIndex = 59;
             this.temperature2.TextChanged += new System.EventHandler(this.temperature2_TextChanged);
             // 
             // temperature1
             // 
-            this.temperature1.Location = new System.Drawing.Point(38, 95);
+            resources.ApplyResources(this.temperature1, "temperature1");
             this.temperature1.Name = "temperature1";
-            this.temperature1.Size = new System.Drawing.Size(92, 20);
-            this.temperature1.TabIndex = 58;
             this.temperature1.TextChanged += new System.EventHandler(this.temperature1_TextChanged);
             // 
             // nbDonneesText
             // 
-            this.nbDonneesText.AutoSize = true;
-            this.nbDonneesText.Location = new System.Drawing.Point(231, 97);
+            resources.ApplyResources(this.nbDonneesText, "nbDonneesText");
             this.nbDonneesText.Name = "nbDonneesText";
-            this.nbDonneesText.Size = new System.Drawing.Size(70, 13);
-            this.nbDonneesText.TabIndex = 56;
-            this.nbDonneesText.Text = "Nb Données:";
             this.nbDonneesText.Click += new System.EventHandler(this.nbDonneesText_Click);
             // 
             // temp1
             // 
-            this.temp1.AutoSize = true;
-            this.temp1.Location = new System.Drawing.Point(46, 79);
+            resources.ApplyResources(this.temp1, "temp1");
             this.temp1.Name = "temp1";
-            this.temp1.Size = new System.Drawing.Size(76, 13);
-            this.temp1.TabIndex = 55;
-            this.temp1.Text = "Température 1";
             this.temp1.Click += new System.EventHandler(this.temp1_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(55, 35);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "N° Port";
             this.label4.Click += new System.EventHandler(this.nPort_Click);
             // 
             // Temp2
             // 
-            this.Temp2.AutoSize = true;
-            this.Temp2.Location = new System.Drawing.Point(144, 79);
+            resources.ApplyResources(this.Temp2, "Temp2");
             this.Temp2.Name = "Temp2";
-            this.Temp2.Size = new System.Drawing.Size(76, 13);
-            this.Temp2.TabIndex = 53;
-            this.Temp2.Text = "Température 2";
             this.Temp2.Click += new System.EventHandler(this.temp2_Click);
             // 
             // choixBaurate
             // 
+            resources.ApplyResources(this.choixBaurate, "choixBaurate");
             this.choixBaurate.FormattingEnabled = true;
             this.choixBaurate.Items.AddRange(new object[] {
-            "100",
-            "300",
-            "600",
-            "1200",
-            "2400",
-            "4800",
-            "9600",
-            "14400",
-            "19200",
-            "38400",
-            "56000",
-            "576000",
-            "115200",
-            "128000",
-            "256000"});
-            this.choixBaurate.Location = new System.Drawing.Point(136, 49);
+            resources.GetString("choixBaurate.Items"),
+            resources.GetString("choixBaurate.Items1"),
+            resources.GetString("choixBaurate.Items2"),
+            resources.GetString("choixBaurate.Items3"),
+            resources.GetString("choixBaurate.Items4"),
+            resources.GetString("choixBaurate.Items5"),
+            resources.GetString("choixBaurate.Items6"),
+            resources.GetString("choixBaurate.Items7"),
+            resources.GetString("choixBaurate.Items8"),
+            resources.GetString("choixBaurate.Items9"),
+            resources.GetString("choixBaurate.Items10"),
+            resources.GetString("choixBaurate.Items11"),
+            resources.GetString("choixBaurate.Items12"),
+            resources.GetString("choixBaurate.Items13"),
+            resources.GetString("choixBaurate.Items14")});
             this.choixBaurate.Name = "choixBaurate";
-            this.choixBaurate.Size = new System.Drawing.Size(72, 21);
-            this.choixBaurate.TabIndex = 52;
             this.choixBaurate.SelectedIndexChanged += new System.EventHandler(this.baurate_SelectedIndexChanged);
             // 
             // dataBits
             // 
-            this.dataBits.AutoSize = true;
-            this.dataBits.Location = new System.Drawing.Point(235, 35);
+            resources.ApplyResources(this.dataBits, "dataBits");
             this.dataBits.Name = "dataBits";
-            this.dataBits.Size = new System.Drawing.Size(50, 13);
-            this.dataBits.TabIndex = 51;
-            this.dataBits.Text = "Data Bits";
             this.dataBits.Click += new System.EventHandler(this.dataBits_Click);
             // 
             // choixDataBits
             // 
+            resources.ApplyResources(this.choixDataBits, "choixDataBits");
             this.choixDataBits.FormattingEnabled = true;
             this.choixDataBits.Items.AddRange(new object[] {
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.choixDataBits.Location = new System.Drawing.Point(225, 49);
+            resources.GetString("choixDataBits.Items"),
+            resources.GetString("choixDataBits.Items1"),
+            resources.GetString("choixDataBits.Items2"),
+            resources.GetString("choixDataBits.Items3")});
             this.choixDataBits.Name = "choixDataBits";
-            this.choixDataBits.Size = new System.Drawing.Size(72, 21);
-            this.choixDataBits.TabIndex = 49;
             this.choixDataBits.SelectedIndexChanged += new System.EventHandler(this.dataBits_SelectedIndexChanged);
             // 
             // boutonQuitter
             // 
-            this.boutonQuitter.Location = new System.Drawing.Point(485, 373);
+            resources.ApplyResources(this.boutonQuitter, "boutonQuitter");
             this.boutonQuitter.Name = "boutonQuitter";
-            this.boutonQuitter.Size = new System.Drawing.Size(77, 29);
-            this.boutonQuitter.TabIndex = 62;
-            this.boutonQuitter.Text = "Quitter";
             this.boutonQuitter.UseVisualStyleBackColor = true;
             this.boutonQuitter.Click += new System.EventHandler(this.boutonQuitter_Click);
             // 
             // boutonEffacer
             // 
-            this.boutonEffacer.Location = new System.Drawing.Point(485, 323);
+            resources.ApplyResources(this.boutonEffacer, "boutonEffacer");
             this.boutonEffacer.Name = "boutonEffacer";
-            this.boutonEffacer.Size = new System.Drawing.Size(77, 32);
-            this.boutonEffacer.TabIndex = 61;
-            this.boutonEffacer.Text = "Effacer";
             this.boutonEffacer.UseVisualStyleBackColor = true;
             this.boutonEffacer.Click += new System.EventHandler(this.effacer_Click);
             // 
@@ -240,123 +225,229 @@ namespace SimpleSerial
             // 
             // choixPort
             // 
+            resources.ApplyResources(this.choixPort, "choixPort");
             this.choixPort.FormattingEnabled = true;
-            this.choixPort.Location = new System.Drawing.Point(49, 49);
             this.choixPort.Name = "choixPort";
-            this.choixPort.Size = new System.Drawing.Size(72, 21);
-            this.choixPort.TabIndex = 63;
             this.choixPort.SelectedIndexChanged += new System.EventHandler(this.port_SelectedIndexChanged);
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(305, 97);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "nbDonnees";
             this.label7.Click += new System.EventHandler(this.nbDonnees_Click);
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(38, 164);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Controls.Add(this.tab1Min);
+            this.tabControl1.Controls.Add(this.tab10Min);
+            this.tabControl1.Controls.Add(this.tab1Hr);
+            this.tabControl1.Controls.Add(this.tabTempsReel);
+            this.tabControl1.Controls.Add(this.tabTest);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(404, 236);
-            this.tabControl1.TabIndex = 65;
             // 
-            // tabPage1
+            // tab1Min
             // 
-            this.tabPage1.Controls.Add(this.textBox1Min);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(396, 210);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "1min";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.tab1Min, "tab1Min");
+            this.tab1Min.Controls.Add(this.list1Min);
+            this.tab1Min.Name = "tab1Min";
+            this.tab1Min.UseVisualStyleBackColor = true;
             // 
-            // textBox1Min
+            // list1Min
             // 
-            this.textBox1Min.Location = new System.Drawing.Point(0, 0);
-            this.textBox1Min.Multiline = true;
-            this.textBox1Min.Name = "textBox1Min";
-            this.textBox1Min.ReadOnly = true;
-            this.textBox1Min.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1Min.Size = new System.Drawing.Size(396, 210);
-            this.textBox1Min.TabIndex = 2;
-            this.textBox1Min.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1Min.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            resources.ApplyResources(this.list1Min, "list1Min");
+            this.list1Min.BackColor = System.Drawing.SystemColors.Window;
+            this.list1Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18});
+            this.list1Min.Name = "list1Min";
+            this.list1Min.UseCompatibleStateImageBehavior = false;
+            this.list1Min.View = System.Windows.Forms.View.Details;
+            this.list1Min.SelectedIndexChanged += new System.EventHandler(this.list1Min_SelectedIndexChanged);
             // 
-            // tabPage2
+            // columnHeader13
             // 
-            this.tabPage2.Controls.Add(this.textBox10Min);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(396, 210);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "10min";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.columnHeader13, "columnHeader13");
             // 
-            // textBox10Min
+            // columnHeader14
             // 
-            this.textBox10Min.Location = new System.Drawing.Point(0, 0);
-            this.textBox10Min.Multiline = true;
-            this.textBox10Min.Name = "textBox10Min";
-            this.textBox10Min.ReadOnly = true;
-            this.textBox10Min.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox10Min.Size = new System.Drawing.Size(396, 210);
-            this.textBox10Min.TabIndex = 3;
-            this.textBox10Min.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            resources.ApplyResources(this.columnHeader14, "columnHeader14");
             // 
-            // tabPage3
+            // columnHeader15
             // 
-            this.tabPage3.Controls.Add(this.textBox1Hr);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(396, 210);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "1hr";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.columnHeader15, "columnHeader15");
             // 
-            // textBox1Hr
+            // columnHeader16
             // 
-            this.textBox1Hr.Location = new System.Drawing.Point(-1, 0);
-            this.textBox1Hr.Multiline = true;
-            this.textBox1Hr.Name = "textBox1Hr";
-            this.textBox1Hr.ReadOnly = true;
-            this.textBox1Hr.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1Hr.Size = new System.Drawing.Size(396, 210);
-            this.textBox1Hr.TabIndex = 3;
-            this.textBox1Hr.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            resources.ApplyResources(this.columnHeader16, "columnHeader16");
             // 
-            // tabPage4
+            // columnHeader17
             // 
-            this.tabPage4.Controls.Add(this.textBoxTempsReel);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(396, 210);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Temps réel";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.columnHeader17, "columnHeader17");
+            // 
+            // columnHeader18
+            // 
+            resources.ApplyResources(this.columnHeader18, "columnHeader18");
+            // 
+            // tab10Min
+            // 
+            resources.ApplyResources(this.tab10Min, "tab10Min");
+            this.tab10Min.Controls.Add(this.list10Min);
+            this.tab10Min.Name = "tab10Min";
+            this.tab10Min.UseVisualStyleBackColor = true;
+            // 
+            // list10Min
+            // 
+            resources.ApplyResources(this.list10Min, "list10Min");
+            this.list10Min.BackColor = System.Drawing.SystemColors.Window;
+            this.list10Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            this.list10Min.Name = "list10Min";
+            this.list10Min.UseCompatibleStateImageBehavior = false;
+            this.list10Min.View = System.Windows.Forms.View.Details;
+            this.list10Min.SelectedIndexChanged += new System.EventHandler(this.list10Min_SelectedIndexChanged);
+            // 
+            // columnHeader7
+            // 
+            resources.ApplyResources(this.columnHeader7, "columnHeader7");
+            // 
+            // columnHeader8
+            // 
+            resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            // 
+            // columnHeader9
+            // 
+            resources.ApplyResources(this.columnHeader9, "columnHeader9");
+            // 
+            // columnHeader10
+            // 
+            resources.ApplyResources(this.columnHeader10, "columnHeader10");
+            // 
+            // columnHeader11
+            // 
+            resources.ApplyResources(this.columnHeader11, "columnHeader11");
+            // 
+            // columnHeader12
+            // 
+            resources.ApplyResources(this.columnHeader12, "columnHeader12");
+            // 
+            // tab1Hr
+            // 
+            resources.ApplyResources(this.tab1Hr, "tab1Hr");
+            this.tab1Hr.Controls.Add(this.list1Heure);
+            this.tab1Hr.Name = "tab1Hr";
+            this.tab1Hr.UseVisualStyleBackColor = true;
+            // 
+            // list1Heure
+            // 
+            resources.ApplyResources(this.list1Heure, "list1Heure");
+            this.list1Heure.BackColor = System.Drawing.SystemColors.Window;
+            this.list1Heure.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.list1Heure.Name = "list1Heure";
+            this.list1Heure.UseCompatibleStateImageBehavior = false;
+            this.list1Heure.View = System.Windows.Forms.View.Details;
+            this.list1Heure.SelectedIndexChanged += new System.EventHandler(this.list1Heure_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            // 
+            // columnHeader2
+            // 
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
+            // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // columnHeader4
+            // 
+            resources.ApplyResources(this.columnHeader4, "columnHeader4");
+            // 
+            // columnHeader5
+            // 
+            resources.ApplyResources(this.columnHeader5, "columnHeader5");
+            // 
+            // columnHeader6
+            // 
+            resources.ApplyResources(this.columnHeader6, "columnHeader6");
+            // 
+            // tabTempsReel
+            // 
+            resources.ApplyResources(this.tabTempsReel, "tabTempsReel");
+            this.tabTempsReel.Controls.Add(this.listTempsReel);
+            this.tabTempsReel.Name = "tabTempsReel";
+            this.tabTempsReel.UseVisualStyleBackColor = true;
+            // 
+            // listTempsReel
+            // 
+            resources.ApplyResources(this.listTempsReel, "listTempsReel");
+            this.listTempsReel.BackColor = System.Drawing.SystemColors.Window;
+            this.listTempsReel.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24});
+            this.listTempsReel.Name = "listTempsReel";
+            this.listTempsReel.UseCompatibleStateImageBehavior = false;
+            this.listTempsReel.View = System.Windows.Forms.View.Details;
+            this.listTempsReel.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
+            // 
+            // columnHeader19
+            // 
+            resources.ApplyResources(this.columnHeader19, "columnHeader19");
+            // 
+            // columnHeader20
+            // 
+            resources.ApplyResources(this.columnHeader20, "columnHeader20");
+            // 
+            // columnHeader21
+            // 
+            resources.ApplyResources(this.columnHeader21, "columnHeader21");
+            // 
+            // columnHeader22
+            // 
+            resources.ApplyResources(this.columnHeader22, "columnHeader22");
+            // 
+            // columnHeader23
+            // 
+            resources.ApplyResources(this.columnHeader23, "columnHeader23");
+            // 
+            // columnHeader24
+            // 
+            resources.ApplyResources(this.columnHeader24, "columnHeader24");
+            // 
+            // tabTest
+            // 
+            resources.ApplyResources(this.tabTest, "tabTest");
+            this.tabTest.Controls.Add(this.textBoxTempsReel);
+            this.tabTest.Name = "tabTest";
+            this.tabTest.UseVisualStyleBackColor = true;
             // 
             // textBoxTempsReel
             // 
-            this.textBoxTempsReel.Location = new System.Drawing.Point(2, 1);
-            this.textBoxTempsReel.Multiline = true;
+            resources.ApplyResources(this.textBoxTempsReel, "textBoxTempsReel");
             this.textBoxTempsReel.Name = "textBoxTempsReel";
             this.textBoxTempsReel.ReadOnly = true;
-            this.textBoxTempsReel.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxTempsReel.Size = new System.Drawing.Size(396, 210);
-            this.textBoxTempsReel.TabIndex = 3;
-            this.textBoxTempsReel.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBoxTempsReel.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // timer1Min
             // 
@@ -375,19 +466,14 @@ namespace SimpleSerial
             // 
             // baudRate
             // 
-            this.baudRate.AutoSize = true;
-            this.baudRate.Location = new System.Drawing.Point(145, 36);
+            resources.ApplyResources(this.baudRate, "baudRate");
             this.baudRate.Name = "baudRate";
-            this.baudRate.Size = new System.Drawing.Size(55, 13);
-            this.baudRate.TabIndex = 66;
-            this.baudRate.Text = "BaudRate";
             this.baudRate.Click += new System.EventHandler(this.baudRate_Click);
             // 
-            // Form1
+            // PuriSerial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 440);
             this.Controls.Add(this.baudRate);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label7);
@@ -406,18 +492,16 @@ namespace SimpleSerial
             this.Controls.Add(this.choixDataBits);
             this.Controls.Add(this.boutonArret);
             this.Controls.Add(this.boutonDemarrer);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "PuriSerial";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tab1Min.ResumeLayout(false);
+            this.tab10Min.ResumeLayout(false);
+            this.tab1Hr.ResumeLayout(false);
+            this.tabTempsReel.ResumeLayout(false);
+            this.tabTest.ResumeLayout(false);
+            this.tabTest.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,18 +528,44 @@ namespace SimpleSerial
         private System.Windows.Forms.ComboBox choixPort;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tab1Min;
+        private System.Windows.Forms.TabPage tab10Min;
+        private System.Windows.Forms.TabPage tab1Hr;
         private System.Windows.Forms.Timer timer1Min;
         private System.Windows.Forms.Timer timer10Min;
         private System.Windows.Forms.Timer timer1Hr;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TextBox textBox1Min;
-        private System.Windows.Forms.TextBox textBox10Min;
-        private System.Windows.Forms.TextBox textBox1Hr;
         private System.Windows.Forms.TextBox textBoxTempsReel;
         private System.Windows.Forms.Label baudRate;
+        private System.Windows.Forms.ListView list1Min;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ListView list10Min;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ListView list1Heure;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.TabPage tabTempsReel;
+        private System.Windows.Forms.ListView listTempsReel;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.TabPage tabTest;
     }
 }
 
