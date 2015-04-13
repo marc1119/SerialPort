@@ -130,9 +130,8 @@
   <data name="tab10Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 330</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="nbDonneesText.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="choixPort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -144,6 +143,7 @@
   <data name="columnHeader14.Text" xml:space="preserve">
     <value>T° 1</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="columnHeader6.Width" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
@@ -174,8 +174,8 @@
   <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">
     <value>columnHeader22</value>
   </data>
-  <data name="&gt;&gt;tabTempsReel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="boutonQuitter.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="choixDataBits.Items" xml:space="preserve">
     <value>5</value>
@@ -195,8 +195,8 @@
   <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
-  <data name="choixBaurate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 28</value>
+  <data name="temperature1.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
   </data>
   <data name="&gt;&gt;serialPort1.Name" xml:space="preserve">
     <value>serialPort1</value>
@@ -237,6 +237,9 @@
   <data name="&gt;&gt;Temp2.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="&gt;&gt;boutonArret.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="columnHeader12.Width" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
@@ -260,6 +263,9 @@
   </data>
   <data name="tab10Min.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;temperature2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;choixBaurate.Parent" xml:space="preserve">
     <value>$this</value>
@@ -294,8 +300,8 @@
   <data name="&gt;&gt;baudRate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;tab1Hr.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="nbDonneesText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
   </data>
   <data name="choixPort.Location" type="System.Drawing.Point, System.Drawing">
     <value>74, 75</value>
@@ -308,9 +314,6 @@
   </data>
   <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>885, 677</value>
   </data>
   <data name="&gt;&gt;timer10Min.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -333,8 +336,8 @@
   <data name="&gt;&gt;timer1Min.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBoxTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>T° 2</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Temps</value>
@@ -414,6 +417,9 @@
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>606, 363</value>
   </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="&gt;&gt;list1Min.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -482,6 +488,9 @@
   </data>
   <data name="listTempsReel.Size" type="System.Drawing.Size, System.Drawing">
     <value>592, 324</value>
+  </data>
+  <data name="tab1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
     <value>columnHeader15</value>
@@ -576,17 +585,14 @@
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>Var2</value>
   </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
+  <data name="&gt;&gt;tabTempsReel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="temperature1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 26</value>
+  <data name="boutonArret.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
-  </data>
-  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 195</value>
   </data>
   <data name="&gt;&gt;tabTempsReel.Parent" xml:space="preserve">
     <value>tabControl1</value>
@@ -600,8 +606,8 @@
   <data name="&gt;&gt;Temp2.Name" xml:space="preserve">
     <value>Temp2</value>
   </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>T° 2</value>
+  <data name="choixBaurate.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
   </data>
   <data name="&gt;&gt;tab1Min.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -654,11 +660,11 @@
   <data name="tabTest.Text" xml:space="preserve">
     <value>Debug</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="temperature2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
+  </data>
+  <data name="choixDataBits.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
   </data>
   <data name="nbDonneesText.Location" type="System.Drawing.Point, System.Drawing">
     <value>346, 149</value>
@@ -703,6 +709,9 @@
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tab1Hr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tab1Hr.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="&gt;&gt;temperature1.ZOrder" xml:space="preserve">
@@ -762,9 +771,6 @@
   <data name="listTempsReel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
     <value>tabControl1</value>
   </data>
@@ -792,6 +798,9 @@
   <data name="&gt;&gt;tab10Min.Name" xml:space="preserve">
     <value>tab10Min</value>
   </data>
+  <data name="choixBaurate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 28</value>
+  </data>
   <data name="&gt;&gt;listTempsReel.Name" xml:space="preserve">
     <value>listTempsReel</value>
   </data>
@@ -810,14 +819,14 @@
   <data name="Temp2.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 20</value>
   </data>
-  <data name="temperature1.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
   <data name="columnHeader16.Text" xml:space="preserve">
     <value>T° 2</value>
   </data>
   <data name="temperature1.Location" type="System.Drawing.Point, System.Drawing">
     <value>57, 146</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
   </data>
   <data name="&gt;&gt;Temp2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -831,6 +840,9 @@
   <data name="&gt;&gt;choixPort.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="textBoxTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="&gt;&gt;columnHeader14.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -840,17 +852,14 @@
   <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
     <value>columnHeader6</value>
   </data>
-  <data name="boutonArret.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="boutonDemarrer.Text" xml:space="preserve">
     <value>Démarrer</value>
   </data>
   <data name="&gt;&gt;columnHeader22.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataBits.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;boutonArret.Name" xml:space="preserve">
+    <value>boutonArret</value>
   </data>
   <data name="&gt;&gt;temperature2.Name" xml:space="preserve">
     <value>temperature2</value>
@@ -861,11 +870,8 @@
   <data name="baudRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>218, 55</value>
   </data>
-  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
-    <value>columnHeader3</value>
-  </data>
-  <data name="baudRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 20</value>
+  <data name="&gt;&gt;dataBits.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -885,14 +891,11 @@
   <data name="&gt;&gt;textBoxTempsReel.Parent" xml:space="preserve">
     <value>tabTest</value>
   </data>
-  <data name="textBoxTempsReel.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
-  </data>
   <data name="list10Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;temperature2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="temperature1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 26</value>
   </data>
   <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -930,9 +933,6 @@
   <data name="columnHeader21.Text" xml:space="preserve">
     <value>Var1</value>
   </data>
-  <data name="nbDonneesText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 20</value>
-  </data>
   <data name="choixBaurate.Items9" xml:space="preserve">
     <value>38400</value>
   </data>
@@ -941,9 +941,6 @@
   </data>
   <data name="columnHeader15.Text" xml:space="preserve">
     <value>Var1</value>
-  </data>
-  <data name="&gt;&gt;list10Min.Parent" xml:space="preserve">
-    <value>tab10Min</value>
   </data>
   <data name="textBoxTempsReel.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 5</value>
@@ -972,6 +969,9 @@
   <data name="textBoxTempsReel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>458, 149</value>
+  </data>
   <data name="list1Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
@@ -980,6 +980,9 @@
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="&gt;&gt;listTempsReel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tabTempsReel.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 330</value>
@@ -1002,9 +1005,6 @@
   <data name="boutonArret.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 49</value>
   </data>
-  <data name="boutonQuitter.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
   <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -1013,9 +1013,6 @@
   </data>
   <data name="dataBits.Location" type="System.Drawing.Point, System.Drawing">
     <value>352, 54</value>
-  </data>
-  <data name="&gt;&gt;boutonArret.Name" xml:space="preserve">
-    <value>boutonArret</value>
   </data>
   <data name="choixBaurate.Items2" xml:space="preserve">
     <value>600</value>
@@ -1065,8 +1062,8 @@
   <data name="tabTest.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="boutonArret.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+  <data name="textBoxTempsReel.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
   </data>
   <data name="&gt;&gt;tab10Min.Parent" xml:space="preserve">
     <value>tabControl1</value>
@@ -1095,8 +1092,8 @@
   <data name="&gt;&gt;timer1Hr.Name" xml:space="preserve">
     <value>timer1Hr</value>
   </data>
-  <data name="tab1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>885, 677</value>
   </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1107,11 +1104,11 @@
   <data name="columnHeader12.Text" xml:space="preserve">
     <value>Nb Data</value>
   </data>
-  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
-    <value>columnHeader9</value>
+  <data name="boutonArret.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="choixDataBits.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
+  <data name="nbDonneesText.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;list1Min.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1128,8 +1125,8 @@
   <data name="list1Heure.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 5</value>
   </data>
-  <data name="&gt;&gt;boutonArret.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 195</value>
   </data>
   <data name="choixBaurate.Items4" xml:space="preserve">
     <value>2400</value>
@@ -1149,8 +1146,8 @@
   <data name="choixDataBits.Items1" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="choixBaurate.TabIndex" type="System.Int32, mscorlib">
-    <value>52</value>
+  <data name="baudRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
   </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Var2</value>
@@ -1170,6 +1167,9 @@
   <data name="Temp2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;list1Heure.Name" xml:space="preserve">
+    <value>list1Heure</value>
+  </data>
   <data name="&gt;&gt;list1Heure.Parent" xml:space="preserve">
     <value>tab1Hr</value>
   </data>
@@ -1188,8 +1188,8 @@
   <data name="dataBits.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
   </data>
-  <data name="&gt;&gt;listTempsReel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;list10Min.Parent" xml:space="preserve">
+    <value>tab10Min</value>
   </data>
   <data name="&gt;&gt;columnHeader16.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1203,8 +1203,8 @@
   <data name="&gt;&gt;progressBar1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>458, 149</value>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tab1Min.Text" xml:space="preserve">
     <value>1 min</value>
@@ -1218,8 +1218,8 @@
   <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;list1Heure.Name" xml:space="preserve">
-    <value>list1Heure</value>
+  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
+    <value>columnHeader9</value>
   </data>
   <data name="choixDataBits.Items3" xml:space="preserve">
     <value>8</value>
@@ -1227,8 +1227,8 @@
   <data name="tab10Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
   </data>
   <data name="tabTest.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 330</value>
@@ -1242,14 +1242,14 @@
   <metadata name="serialPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="serialPort1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="timerProgressBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>165, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="timer1Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>310, 17</value>
   </metadata>
   <metadata name="timer10Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>418, 17</value>
@@ -1260,7 +1260,7 @@
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>fr</value>
   </metadata>
-  <metadata name="serialPort1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="timer1Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>310, 17</value>
   </metadata>
 </root>

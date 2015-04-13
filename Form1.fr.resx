@@ -117,199 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="boutonDemarrer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 42</value>
-  </data>
-  <data name="boutonDemarrer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 31</value>
-  </data>
-  <data name="boutonArret.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 97</value>
-  </data>
-  <data name="boutonArret.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 32</value>
-  </data>
-  <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 127</value>
-  </data>
-  <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 13</value>
-  </data>
-  <data name="temperature2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 95</value>
-  </data>
-  <data name="temperature2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
-  </data>
-  <data name="temperature1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 95</value>
-  </data>
-  <data name="temperature1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
-  </data>
-  <data name="nbDonneesText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 97</value>
-  </data>
-  <data name="nbDonneesText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
-  </data>
-  <data name="temp1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 79</value>
-  </data>
-  <data name="temp1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 35</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 13</value>
-  </data>
-  <data name="Temp2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 79</value>
-  </data>
-  <data name="Temp2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
-  <data name="choixBaurate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 49</value>
-  </data>
-  <data name="choixBaurate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 21</value>
-  </data>
-  <data name="dataBits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 35</value>
-  </data>
-  <data name="dataBits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 13</value>
-  </data>
-  <data name="choixDataBits.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 49</value>
-  </data>
-  <data name="choixDataBits.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 21</value>
-  </data>
-  <data name="boutonQuitter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 373</value>
-  </data>
-  <data name="boutonQuitter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 29</value>
-  </data>
-  <data name="boutonEffacer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 323</value>
-  </data>
-  <data name="boutonEffacer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 32</value>
-  </data>
-  <data name="choixPort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 49</value>
-  </data>
-  <data name="choixPort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 21</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>305, 97</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+  <data name="boutonDemarrer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 13</value>
+  <data name="boutonArret.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list1Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="progressBar1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="temperature2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list1Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
+  <data name="temperature1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="tab1Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="nbDonneesText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
-  <data name="tab1Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="temp1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
-  <data name="tab1Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 210</value>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
-  <data name="list10Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="Temp2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
-  <data name="list10Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="choixBaurate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list10Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
+  <data name="dataBits.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
-  <data name="tab10Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="choixDataBits.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="tab10Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="boutonQuitter.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="tab10Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 210</value>
+  <data name="boutonEffacer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list1Heure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="choixPort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list1Heure.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="tab1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="list1Heure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
+  <data name="tab10Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="tab1Hr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="tab1Hr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="tab1Hr.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="listTempsReel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="tab1Hr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 210</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="listTempsReel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="listTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>4, 5</value>
   </data>
   <data name="listTempsReel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 206</value>
+    <value>590, 320</value>
   </data>
-  <data name="tabTempsReel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
-  <data name="tabTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="tabTempsReel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="tabTempsReel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 210</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 164</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>404, 236</value>
-  </data>
-  <data name="baudRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 36</value>
-  </data>
-  <data name="baudRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>590, 440</value>
+  <data name="baudRate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 6, 0</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -813,5 +690,8 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAHV1dEiRkZCQHR0dQgAAAAIAAAAAwf///4D///+A////AH///wB/
         //8AP///gB///8AP///wD///+Af///wD///+Af///wD///+A////wf///+H//w==
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 8, 6, 8</value>
   </data>
 </root>

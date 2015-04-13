@@ -21,13 +21,15 @@ using System.Windows;
 #region Gestion
 namespace SimpleSerial
 {
+
     public partial class PuriSerial : Form
     {
+        StreamWriter MyStreamWriter;
         // variable pour stocker les données
         string RxString;
 
         //path du fichier de sauvegarde
-        string path = @"F:\test.txt";
+        string path = @"..\temp.txt";
 
         public PuriSerial()
         {
@@ -46,7 +48,6 @@ namespace SimpleSerial
 
         private void DisplayText(object sender, EventArgs e)
         {
-            //Pour stocker les data
             serialPort.Handshake = Handshake.None;
             serialPort.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);        
         }
@@ -54,13 +55,12 @@ namespace SimpleSerial
 
         void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            string data = serialPort.ReadLine(); //Bug quand on arrête le programme
-            StreamWriter MyStreamWriter = new StreamWriter(path, true);
+            //permet de sotckerles donnée recues dans un fichier text
+            string data = serialPort.ReadLine(); //Possible bug à l'arrêt du programme
+            MyStreamWriter = new StreamWriter(path, true);
             MyStreamWriter.WriteLine(data);
             MyStreamWriter.Flush();
             MyStreamWriter.Close();
-
-
         }
         
         private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
@@ -68,17 +68,18 @@ namespace SimpleSerial
             RxString = serialPort.ReadExisting();
             this.Invoke(new EventHandler(DisplayText));
         }
-        
 
         private void temperature1_TextChanged(object sender, EventArgs e)
         {
-            //afficher la dernière température 1 lue
+            //afficher la dernière température 1 lue 
+            //à modifier
             temperature1.AppendText("");
         }
 
         private void temperature2_TextChanged(object sender, EventArgs e)
         {
             //afficher la dernière température 2 lue
+            //à modifier
            temperature2.AppendText("");
         }
 #endregion
@@ -132,7 +133,34 @@ namespace SimpleSerial
                 boutonArret.Enabled = true;
             }
 
-            //Pour mettre les éléments dans la liste
+            //Pour mettre les éléments dans la liste 1 minutes
+            ListViewItem uneMin = new ListViewItem("temps"); //temps
+            uneMin.SubItems.Add("température");              //temperature 1
+            uneMin.SubItems.Add("var");                      //variation
+            uneMin.SubItems.Add("t2");                       //temperature 2
+            uneMin.SubItems.Add("var");                      //variation
+            uneMin.SubItems.Add("Nbdata");                   //nombre de données
+            list1Min.Items.Add(uneMin);
+
+            //Pour mettre les éléments dans la liste 10 minutes
+            ListViewItem dixMin = new ListViewItem("temps"); //temps
+            dixMin.SubItems.Add("température");              //temperature 1
+            dixMin.SubItems.Add("var");                      //variation
+            dixMin.SubItems.Add("t2");                       //temperature 2
+            dixMin.SubItems.Add("var");                      //variation
+            dixMin.SubItems.Add("Nbdata");                   //nombre de données
+            listTempsReel.Items.Add(dixMin);
+
+            //Pour mettre les éléments dans la liste 1 heure
+            ListViewItem uneHeure = new ListViewItem("temps"); //temps
+            uneHeure.SubItems.Add("température");              //temperature 1
+            uneHeure.SubItems.Add("var");                      //variation
+            uneHeure.SubItems.Add("t2");                       //temperature 2
+            uneHeure.SubItems.Add("var");                      //variation
+            uneHeure.SubItems.Add("Nbdata");                   //nombre de données
+            listTempsReel.Items.Add(uneHeure);
+
+            //Pour mettre les éléments dans la liste temps réel
             ListViewItem tempsReel = new ListViewItem("temps"); //temps
             tempsReel.SubItems.Add("température");              //temperature 1
             tempsReel.SubItems.Add("var");                      //variation
@@ -145,7 +173,7 @@ namespace SimpleSerial
         //bouton arret
         private void buttonStop_Click(object sender, EventArgs e)
         {
-
+            MyStreamWriter.Close();
             //pour arreter la barre de progression
             timerProgressBar.Stop();
             progressBar1.Value = 0;
