@@ -40,7 +40,7 @@ namespace SimpleSerial
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PuriSerial));
             this.boutonDemarrer = new System.Windows.Forms.Button();
             this.boutonArret = new System.Windows.Forms.Button();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort = new System.IO.Ports.SerialPort(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.temperature2 = new System.Windows.Forms.TextBox();
             this.temperature1 = new System.Windows.Forms.TextBox();
@@ -89,8 +89,6 @@ namespace SimpleSerial
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabTest = new System.Windows.Forms.TabPage();
-            this.textBoxTempsReel = new System.Windows.Forms.TextBox();
             this.timer1Min = new System.Windows.Forms.Timer(this.components);
             this.timer10Min = new System.Windows.Forms.Timer(this.components);
             this.timer1Hr = new System.Windows.Forms.Timer(this.components);
@@ -100,7 +98,6 @@ namespace SimpleSerial
             this.tab10Min.SuspendLayout();
             this.tab1Hr.SuspendLayout();
             this.tabTempsReel.SuspendLayout();
-            this.tabTest.SuspendLayout();
             this.SuspendLayout();
             // 
             // boutonDemarrer
@@ -117,10 +114,10 @@ namespace SimpleSerial
             this.boutonArret.UseVisualStyleBackColor = true;
             this.boutonArret.Click += new System.EventHandler(this.buttonStop_Click);
             // 
-            // serialPort1
+            // serialPort
             // 
-            this.serialPort1.PortName = "COM3";
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            this.serialPort.PortName = "COM3";
+            this.serialPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort_DataReceived);
             // 
             // progressBar1
             // 
@@ -243,7 +240,6 @@ namespace SimpleSerial
             this.tabControl1.Controls.Add(this.tab10Min);
             this.tabControl1.Controls.Add(this.tab1Hr);
             this.tabControl1.Controls.Add(this.tabTempsReel);
-            this.tabControl1.Controls.Add(this.tabTest);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
@@ -265,6 +261,8 @@ namespace SimpleSerial
             this.columnHeader16,
             this.columnHeader17,
             this.columnHeader18});
+            this.list1Min.FullRowSelect = true;
+            this.list1Min.GridLines = true;
             this.list1Min.Name = "list1Min";
             this.list1Min.UseCompatibleStateImageBehavior = false;
             this.list1Min.View = System.Windows.Forms.View.Details;
@@ -312,6 +310,8 @@ namespace SimpleSerial
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
+            this.list10Min.FullRowSelect = true;
+            this.list10Min.GridLines = true;
             this.list10Min.Name = "list10Min";
             this.list10Min.UseCompatibleStateImageBehavior = false;
             this.list10Min.View = System.Windows.Forms.View.Details;
@@ -359,6 +359,8 @@ namespace SimpleSerial
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.list1Heure.FullRowSelect = true;
+            this.list1Heure.GridLines = true;
             this.list1Heure.Name = "list1Heure";
             this.list1Heure.UseCompatibleStateImageBehavior = false;
             this.list1Heure.View = System.Windows.Forms.View.Details;
@@ -406,10 +408,12 @@ namespace SimpleSerial
             this.columnHeader22,
             this.columnHeader23,
             this.columnHeader24});
+            this.listTempsReel.FullRowSelect = true;
+            this.listTempsReel.GridLines = true;
             this.listTempsReel.Name = "listTempsReel";
             this.listTempsReel.UseCompatibleStateImageBehavior = false;
             this.listTempsReel.View = System.Windows.Forms.View.Details;
-            this.listTempsReel.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged_1);
+            this.listTempsReel.SelectedIndexChanged += new System.EventHandler(this.listTempsReel_SelectedIndexChanged_1);
             // 
             // columnHeader19
             // 
@@ -434,20 +438,6 @@ namespace SimpleSerial
             // columnHeader24
             // 
             resources.ApplyResources(this.columnHeader24, "columnHeader24");
-            // 
-            // tabTest
-            // 
-            resources.ApplyResources(this.tabTest, "tabTest");
-            this.tabTest.Controls.Add(this.textBoxTempsReel);
-            this.tabTest.Name = "tabTest";
-            this.tabTest.UseVisualStyleBackColor = true;
-            // 
-            // textBoxTempsReel
-            // 
-            resources.ApplyResources(this.textBoxTempsReel, "textBoxTempsReel");
-            this.textBoxTempsReel.Name = "textBoxTempsReel";
-            this.textBoxTempsReel.ReadOnly = true;
-            this.textBoxTempsReel.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // timer1Min
             // 
@@ -500,8 +490,6 @@ namespace SimpleSerial
             this.tab10Min.ResumeLayout(false);
             this.tab1Hr.ResumeLayout(false);
             this.tabTempsReel.ResumeLayout(false);
-            this.tabTest.ResumeLayout(false);
-            this.tabTest.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,7 +499,7 @@ namespace SimpleSerial
 
         private System.Windows.Forms.Button boutonDemarrer;
         private System.Windows.Forms.Button boutonArret;
-        private System.IO.Ports.SerialPort serialPort1;
+        private System.IO.Ports.SerialPort serialPort;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TextBox temperature2;
         private System.Windows.Forms.TextBox temperature1;
@@ -534,7 +522,6 @@ namespace SimpleSerial
         private System.Windows.Forms.Timer timer1Min;
         private System.Windows.Forms.Timer timer10Min;
         private System.Windows.Forms.Timer timer1Hr;
-        private System.Windows.Forms.TextBox textBoxTempsReel;
         private System.Windows.Forms.Label baudRate;
         private System.Windows.Forms.ListView list1Min;
         private System.Windows.Forms.ColumnHeader columnHeader13;
@@ -565,7 +552,6 @@ namespace SimpleSerial
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
-        private System.Windows.Forms.TabPage tabTest;
     }
 }
 

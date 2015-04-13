@@ -14,13 +14,20 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.IO;
+using System.Threading;
+using System.Windows;
 
+#region Gestion
 namespace SimpleSerial
 {
     public partial class PuriSerial : Form
     {
         // variable pour stocker les données
         string RxString;
+
+        //path du fichier de sauvegarde
+        string path = @"F:\test.txt";
 
         public PuriSerial()
         {
@@ -34,66 +41,59 @@ namespace SimpleSerial
         
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (serialPort1.IsOpen) serialPort1.Close();
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // Si le port est fermé, ne pas essayer d'envoyer un caractère.
-            if (!serialPort1.IsOpen) return;
-
-            // Si le port est ouvert, déclarer un char[] array avec un élément.
-            char[] buff = new char[1];
-
-            // Charger l'élément 0 avec une clef de caractère.
-            buff[0] = e.KeyChar;
-
-            // Send the one character buffer.
-            serialPort1.Write(buff, 0, 1);
-
-            // Set the KeyPress event as handled so the character won't
-            // display locally. If you want it to display, omit the next line.
-            e.Handled = true;
+            if (serialPort.IsOpen) serialPort.Close();
         }
 
         private void DisplayText(object sender, EventArgs e)
         {
-            //Pour toutes les données
-            textBoxTempsReel.AppendText(RxString);
+            //Pour stocker les data
+            serialPort.Handshake = Handshake.None;
+            serialPort.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);        
         }
 
-        private void serialPort1_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+
+        void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            RxString = serialPort1.ReadExisting();
-            this.Invoke(new EventHandler(DisplayText));
+            string data = serialPort.ReadLine(); //Bug quand on arrête le programme
+            StreamWriter MyStreamWriter = new StreamWriter(path, true);
+            MyStreamWriter.WriteLine(data);
+            MyStreamWriter.Flush();
+            MyStreamWriter.Close();
 
-            //Compter les donnees
-            int compteur=0;
-            compteur = compteur + 1;
-            string data;
-            data = compteur.ToString();
-            //nbDonnees.AppendText(data);
 
         }
+        
+        private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
+        {
+            RxString = serialPort.ReadExisting();
+            this.Invoke(new EventHandler(DisplayText));
+        }
+        
 
         private void temperature1_TextChanged(object sender, EventArgs e)
         {
             //afficher la dernière température 1 lue
-            temperature1.AppendText(RxString);
+            temperature1.AppendText("");
         }
 
         private void temperature2_TextChanged(object sender, EventArgs e)
         {
             //afficher la dernière température 2 lue
-           temperature2.AppendText(RxString);
+           temperature2.AppendText("");
         }
+#endregion
 
-
-
+#region boutons
         //Les boutons
         //bouton démarrer
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            //Pour effacer le fichier de sauvegarde
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+
             //Pour s'assurer que tout les cases sont remplies
             string testBaudRate = choixBaurate.Text.ToString();
             string testDataBits = choixDataBits.Text.ToString();
@@ -117,23 +117,31 @@ namespace SimpleSerial
                         return;
                     }
                     else
-            serialPort1.PortName = choixPort.Text.ToString();
-            serialPort1.BaudRate = Convert.ToInt32(choixBaurate.Text);
-            serialPort1.DataBits = Convert.ToInt16(choixDataBits.Text);
-            serialPort1.Open();
+            serialPort.PortName = choixPort.Text.ToString();
+            serialPort.BaudRate = Convert.ToInt32(choixBaurate.Text);
+            serialPort.DataBits = Convert.ToInt16(choixDataBits.Text);
+            serialPort.Open();
             timerProgressBar.Start();
             timer1Min.Start();
             timer10Min.Start();
             timer1Hr.Start();
 
-            if (serialPort1.IsOpen)
+            if (serialPort.IsOpen)
             {
                 boutonDemarrer.Enabled = false;
                 boutonArret.Enabled = true;
-                textBoxTempsReel.ReadOnly = false;
             }
-        }
 
+            //Pour mettre les éléments dans la liste
+            ListViewItem tempsReel = new ListViewItem("temps"); //temps
+            tempsReel.SubItems.Add("température");              //temperature 1
+            tempsReel.SubItems.Add("var");                      //variation
+            tempsReel.SubItems.Add("t2");                       //temperature 2
+            tempsReel.SubItems.Add("var");                      //variation
+            tempsReel.SubItems.Add("Nbdata");                   //nombre de données
+            listTempsReel.Items.Add(tempsReel);
+        }
+        
         //bouton arret
         private void buttonStop_Click(object sender, EventArgs e)
         {
@@ -141,25 +149,21 @@ namespace SimpleSerial
             //pour arreter la barre de progression
             timerProgressBar.Stop();
             progressBar1.Value = 0;
-
-            if (serialPort1.IsOpen)
+            if (serialPort.IsOpen)
             {
-                serialPort1.Close();
+                serialPort.Close();
                 boutonDemarrer.Enabled = true;
                 boutonArret.Enabled = false;
-                textBoxTempsReel.ReadOnly = true;
-
             }
         }
 
         //bouton effacer
         private void effacer_Click(object sender, EventArgs e)
         {
-            textBoxTempsReel.Clear();
-            list1Min.Clear();
-            list10Min.Clear();
-            list1Heure.Clear();
-            listTempsReel.Clear();
+            list1Min.Items.Clear();
+            list10Min.Items.Clear();
+            list1Heure.Items.Clear();
+            listTempsReel.Items.Clear();
         }
 
         //bouton quitter
@@ -167,35 +171,26 @@ namespace SimpleSerial
         {
             Application.Exit();
         }
-
+#endregion
         
-
-        //Les textBox
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
+#region progressBar
         //La barre de progression
         private void progressBar1_Click(object sender, EventArgs e)
         {
-
             this.timerProgressBar.Start();
         }
+        #endregion
 
-
-
+#region timers
         //Les timers
         private void timer_Tick(object sender, EventArgs e)
         {
          //Pour la barre de progression et le timer
             progressBar1.Minimum = 0;
-            progressBar1.Maximum = 100;
-            progressBar1.Step = 4;
+            progressBar1.Maximum = 120;
+            progressBar1.Step = 3;
             progressBar1.PerformStep();
-            if (progressBar1.Value == 100)
+            if (progressBar1.Value == 120)
             {
                 progressBar1.Value = 0;
                 timerProgressBar.Stop();
@@ -223,9 +218,9 @@ namespace SimpleSerial
             timer1Min.Stop();
             timer1Min.Start();
         }
+#endregion
 
-
-
+#region comboBox
         //Les comboBox
         private void port_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -241,9 +236,9 @@ namespace SimpleSerial
         {
 
         }
+#endregion
 
-
-
+#region labels
         //Les labels
         private void nbDonneesText_Click(object sender, EventArgs e)
         {
@@ -279,6 +274,10 @@ namespace SimpleSerial
         {
 
         }
+#endregion
+
+#region listes
+        //Pour les listes pour l'affichage des données
 
         private void list1Min_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -295,9 +294,10 @@ namespace SimpleSerial
 
         }
 
-        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void listTempsReel_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
     }
 }
+#endregion
