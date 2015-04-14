@@ -24,12 +24,12 @@ namespace SimpleSerial
 
     public partial class PuriSerial : Form
     {
-        StreamWriter MyStreamWriter;
         // variable pour stocker les données
         string RxString;
 
         //path du fichier de sauvegarde
-        string path = @"..\temp.txt";
+        //string path = @"..\temp.txt";
+        string path = @"D:\Documents\GitHub\SerialPort\temp.txt";
 
         public PuriSerial()
         {
@@ -56,13 +56,14 @@ namespace SimpleSerial
         void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             //permet de sotckerles donnée recues dans un fichier text
-            string data = serialPort.ReadLine(); //Possible bug à l'arrêt du programme
-            MyStreamWriter = new StreamWriter(path, true);
-            MyStreamWriter.WriteLine(data);
-            MyStreamWriter.Flush();
-            MyStreamWriter.Close();
-        }
-        
+            string data = serialPort.ReadLine(); //bug lorsqu'on veut l'arrêter en plein milieux
+            StreamWriter MyStreamWriter = new StreamWriter(path, true);
+                MyStreamWriter.WriteLine(DateTime.Now.TimeOfDay);               //inscrit l'heure
+                MyStreamWriter.WriteLine(data);                                 //inscrit les data
+                MyStreamWriter.Flush();
+                MyStreamWriter.Close();
+         }
+                
         private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
             RxString = serialPort.ReadExisting();
@@ -89,6 +90,10 @@ namespace SimpleSerial
         //bouton démarrer
         private void buttonStart_Click(object sender, EventArgs e)
         {
+            if (serialPort.IsOpen)
+            {
+                serialPort.Close();
+            }
             //Pour effacer le fichier de sauvegarde
             if (File.Exists(path))
             {
@@ -122,10 +127,12 @@ namespace SimpleSerial
             serialPort.BaudRate = Convert.ToInt32(choixBaurate.Text);
             serialPort.DataBits = Convert.ToInt16(choixDataBits.Text);
             serialPort.Open();
+            //Démarer les timers qui vont synchro le projet
             timerProgressBar.Start();
             timer1Min.Start();
             timer10Min.Start();
             timer1Hr.Start();
+            timer1Sec.Start();
 
             if (serialPort.IsOpen)
             {
@@ -149,7 +156,7 @@ namespace SimpleSerial
             dixMin.SubItems.Add("t2");                       //temperature 2
             dixMin.SubItems.Add("var");                      //variation
             dixMin.SubItems.Add("Nbdata");                   //nombre de données
-            listTempsReel.Items.Add(dixMin);
+            list10Min.Items.Add(dixMin);
 
             //Pour mettre les éléments dans la liste 1 heure
             ListViewItem uneHeure = new ListViewItem("temps"); //temps
@@ -158,8 +165,8 @@ namespace SimpleSerial
             uneHeure.SubItems.Add("t2");                       //temperature 2
             uneHeure.SubItems.Add("var");                      //variation
             uneHeure.SubItems.Add("Nbdata");                   //nombre de données
-            listTempsReel.Items.Add(uneHeure);
-
+            list1Heure.Items.Add(uneHeure);
+ 
             //Pour mettre les éléments dans la liste temps réel
             ListViewItem tempsReel = new ListViewItem("temps"); //temps
             tempsReel.SubItems.Add("température");              //temperature 1
@@ -173,13 +180,15 @@ namespace SimpleSerial
         //bouton arret
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            MyStreamWriter.Close();
             //pour arreter la barre de progression
             timerProgressBar.Stop();
+            timer1Min.Stop();
+            timer10Min.Stop();
+            timer1Hr.Stop();
+            timer1Sec.Stop();
             progressBar1.Value = 0;
             if (serialPort.IsOpen)
             {
-                serialPort.Close();
                 boutonDemarrer.Enabled = true;
                 boutonArret.Enabled = false;
             }
@@ -245,6 +254,10 @@ namespace SimpleSerial
             //Pour 1 heure
             timer1Min.Stop();
             timer1Min.Start();
+        }
+        private void timer1Sec_Tick(object sender, EventArgs e)
+        {
+
         }
 #endregion
 
@@ -323,6 +336,16 @@ namespace SimpleSerial
         }
 
         private void listTempsReel_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PuriSerial_Load(object sender, EventArgs e)
         {
 
         }

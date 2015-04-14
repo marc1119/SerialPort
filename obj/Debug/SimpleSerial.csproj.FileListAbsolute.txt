@@ -36,3 +36,6 @@ D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.Properties.Resources.resou
 D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.PuriSerial.fr.resources
 D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.csproj.GenerateResource.Cache
 D:\Documents\GitHub\SerialPort\obj\Debug\fr\SimpleSerial.resources.dll
+D:\Documents\GitHub\SerialPort\bin\Debug\da\SimpleSerial.resources.dll
+D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.PuriSerial.da.resources
+D:\Documents\GitHub\SerialPort\obj\Debug\da\SimpleSerial.resources.dll

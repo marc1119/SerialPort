@@ -55,7 +55,6 @@ namespace SimpleSerial
             this.boutonEffacer = new System.Windows.Forms.Button();
             this.timerProgressBar = new System.Windows.Forms.Timer(this.components);
             this.choixPort = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab1Min = new System.Windows.Forms.TabPage();
             this.list1Min = new System.Windows.Forms.ListView();
@@ -93,6 +92,8 @@ namespace SimpleSerial
             this.timer10Min = new System.Windows.Forms.Timer(this.components);
             this.timer1Hr = new System.Windows.Forms.Timer(this.components);
             this.baudRate = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer1Sec = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tab1Min.SuspendLayout();
             this.tab10Min.SuspendLayout();
@@ -163,7 +164,6 @@ namespace SimpleSerial
             // 
             // choixBaurate
             // 
-            resources.ApplyResources(this.choixBaurate, "choixBaurate");
             this.choixBaurate.FormattingEnabled = true;
             this.choixBaurate.Items.AddRange(new object[] {
             resources.GetString("choixBaurate.Items"),
@@ -181,6 +181,7 @@ namespace SimpleSerial
             resources.GetString("choixBaurate.Items12"),
             resources.GetString("choixBaurate.Items13"),
             resources.GetString("choixBaurate.Items14")});
+            resources.ApplyResources(this.choixBaurate, "choixBaurate");
             this.choixBaurate.Name = "choixBaurate";
             this.choixBaurate.SelectedIndexChanged += new System.EventHandler(this.baurate_SelectedIndexChanged);
             // 
@@ -192,13 +193,13 @@ namespace SimpleSerial
             // 
             // choixDataBits
             // 
-            resources.ApplyResources(this.choixDataBits, "choixDataBits");
             this.choixDataBits.FormattingEnabled = true;
             this.choixDataBits.Items.AddRange(new object[] {
             resources.GetString("choixDataBits.Items"),
             resources.GetString("choixDataBits.Items1"),
             resources.GetString("choixDataBits.Items2"),
             resources.GetString("choixDataBits.Items3")});
+            resources.ApplyResources(this.choixDataBits, "choixDataBits");
             this.choixDataBits.Name = "choixDataBits";
             this.choixDataBits.SelectedIndexChanged += new System.EventHandler(this.dataBits_SelectedIndexChanged);
             // 
@@ -222,37 +223,30 @@ namespace SimpleSerial
             // 
             // choixPort
             // 
-            resources.ApplyResources(this.choixPort, "choixPort");
             this.choixPort.FormattingEnabled = true;
+            resources.ApplyResources(this.choixPort, "choixPort");
             this.choixPort.Name = "choixPort";
             this.choixPort.SelectedIndexChanged += new System.EventHandler(this.port_SelectedIndexChanged);
             // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            this.label7.Click += new System.EventHandler(this.nbDonnees_Click);
-            // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tab1Min);
             this.tabControl1.Controls.Add(this.tab10Min);
             this.tabControl1.Controls.Add(this.tab1Hr);
             this.tabControl1.Controls.Add(this.tabTempsReel);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tab1Min
             // 
-            resources.ApplyResources(this.tab1Min, "tab1Min");
             this.tab1Min.Controls.Add(this.list1Min);
+            resources.ApplyResources(this.tab1Min, "tab1Min");
             this.tab1Min.Name = "tab1Min";
             this.tab1Min.UseVisualStyleBackColor = true;
             // 
             // list1Min
             // 
-            resources.ApplyResources(this.list1Min, "list1Min");
             this.list1Min.BackColor = System.Drawing.SystemColors.Window;
             this.list1Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
@@ -261,6 +255,7 @@ namespace SimpleSerial
             this.columnHeader16,
             this.columnHeader17,
             this.columnHeader18});
+            resources.ApplyResources(this.list1Min, "list1Min");
             this.list1Min.FullRowSelect = true;
             this.list1Min.GridLines = true;
             this.list1Min.Name = "list1Min";
@@ -294,14 +289,13 @@ namespace SimpleSerial
             // 
             // tab10Min
             // 
-            resources.ApplyResources(this.tab10Min, "tab10Min");
             this.tab10Min.Controls.Add(this.list10Min);
+            resources.ApplyResources(this.tab10Min, "tab10Min");
             this.tab10Min.Name = "tab10Min";
             this.tab10Min.UseVisualStyleBackColor = true;
             // 
             // list10Min
             // 
-            resources.ApplyResources(this.list10Min, "list10Min");
             this.list10Min.BackColor = System.Drawing.SystemColors.Window;
             this.list10Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
@@ -310,6 +304,7 @@ namespace SimpleSerial
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
+            resources.ApplyResources(this.list10Min, "list10Min");
             this.list10Min.FullRowSelect = true;
             this.list10Min.GridLines = true;
             this.list10Min.Name = "list10Min";
@@ -343,14 +338,13 @@ namespace SimpleSerial
             // 
             // tab1Hr
             // 
-            resources.ApplyResources(this.tab1Hr, "tab1Hr");
             this.tab1Hr.Controls.Add(this.list1Heure);
+            resources.ApplyResources(this.tab1Hr, "tab1Hr");
             this.tab1Hr.Name = "tab1Hr";
             this.tab1Hr.UseVisualStyleBackColor = true;
             // 
             // list1Heure
             // 
-            resources.ApplyResources(this.list1Heure, "list1Heure");
             this.list1Heure.BackColor = System.Drawing.SystemColors.Window;
             this.list1Heure.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
@@ -359,6 +353,7 @@ namespace SimpleSerial
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            resources.ApplyResources(this.list1Heure, "list1Heure");
             this.list1Heure.FullRowSelect = true;
             this.list1Heure.GridLines = true;
             this.list1Heure.Name = "list1Heure";
@@ -392,14 +387,13 @@ namespace SimpleSerial
             // 
             // tabTempsReel
             // 
-            resources.ApplyResources(this.tabTempsReel, "tabTempsReel");
             this.tabTempsReel.Controls.Add(this.listTempsReel);
+            resources.ApplyResources(this.tabTempsReel, "tabTempsReel");
             this.tabTempsReel.Name = "tabTempsReel";
             this.tabTempsReel.UseVisualStyleBackColor = true;
             // 
             // listTempsReel
             // 
-            resources.ApplyResources(this.listTempsReel, "listTempsReel");
             this.listTempsReel.BackColor = System.Drawing.SystemColors.Window;
             this.listTempsReel.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader19,
@@ -408,6 +402,7 @@ namespace SimpleSerial
             this.columnHeader22,
             this.columnHeader23,
             this.columnHeader24});
+            resources.ApplyResources(this.listTempsReel, "listTempsReel");
             this.listTempsReel.FullRowSelect = true;
             this.listTempsReel.GridLines = true;
             this.listTempsReel.Name = "listTempsReel";
@@ -460,13 +455,24 @@ namespace SimpleSerial
             this.baudRate.Name = "baudRate";
             this.baudRate.Click += new System.EventHandler(this.baudRate_Click);
             // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // timer1Sec
+            // 
+            this.timer1Sec.Interval = 1000;
+            this.timer1Sec.Tick += new System.EventHandler(this.timer1Sec_Tick);
+            // 
             // PuriSerial
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.baudRate);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.choixPort);
             this.Controls.Add(this.boutonQuitter);
             this.Controls.Add(this.boutonEffacer);
@@ -485,6 +491,7 @@ namespace SimpleSerial
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "PuriSerial";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.PuriSerial_Load);
             this.tabControl1.ResumeLayout(false);
             this.tab1Min.ResumeLayout(false);
             this.tab10Min.ResumeLayout(false);
@@ -514,7 +521,6 @@ namespace SimpleSerial
         private System.Windows.Forms.Button boutonEffacer;
         private System.Windows.Forms.Timer timerProgressBar;
         private System.Windows.Forms.ComboBox choixPort;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tab1Min;
         private System.Windows.Forms.TabPage tab10Min;
@@ -552,6 +558,8 @@ namespace SimpleSerial
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer timer1Sec;
     }
 }
 
