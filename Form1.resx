@@ -542,168 +542,147 @@
   <data name="&gt;&gt;choixPort.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Temps</value>
+  <metadata name="timer1Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>310, 17</value>
+  </metadata>
+  <metadata name="timer10Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>418, 17</value>
+  </metadata>
+  <metadata name="timer1Hr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>532, 17</value>
+  </metadata>
+  <data name="baudRate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>T° 1</value>
+  <data name="baudRate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 36</value>
   </data>
-  <data name="columnHeader14.Width" type="System.Int32, mscorlib">
-    <value>105</value>
+  <data name="baudRate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
   </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Var1</value>
+  <data name="baudRate.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>T° 2</value>
+  <data name="baudRate.Text" xml:space="preserve">
+    <value>BaudRate</value>
   </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Var2</value>
+  <data name="&gt;&gt;baudRate.Name" xml:space="preserve">
+    <value>baudRate</value>
   </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Nb Data</value>
+  <data name="&gt;&gt;baudRate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="columnHeader18.Width" type="System.Int32, mscorlib">
-    <value>77</value>
+  <data name="&gt;&gt;baudRate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;baudRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="timer1Sec.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>632, 17</value>
+  </metadata>
+  <data name="nbDonnees.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 95</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="list1Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="list1Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="list1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="nbDonnees.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="list1Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
+  <data name="nbDonnees.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
   </data>
-  <data name="list1Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
+  <data name="nbDonnees.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
-  <data name="list1Min.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="&gt;&gt;nbDonnees.Name" xml:space="preserve">
+    <value>nbDonnees</value>
   </data>
-  <data name="&gt;&gt;list1Min.Name" xml:space="preserve">
-    <value>list1Min</value>
+  <data name="&gt;&gt;nbDonnees.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;list1Min.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;nbDonnees.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;list1Min.Parent" xml:space="preserve">
-    <value>tab1Min</value>
-  </data>
-  <data name="&gt;&gt;list1Min.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;nbDonnees.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tab1Min.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tab1Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tab1Min.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 210</value>
-  </data>
-  <data name="tab1Min.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tab1Min.Text" xml:space="preserve">
-    <value>1 min</value>
-  </data>
-  <data name="&gt;&gt;tab1Min.Name" xml:space="preserve">
-    <value>tab1Min</value>
-  </data>
-  <data name="&gt;&gt;tab1Min.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tab1Min.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tab1Min.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
+  <data name="columnHeader19.Text" xml:space="preserve">
     <value>Temps</value>
   </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
+  <data name="columnHeader20.Text" xml:space="preserve">
     <value>T° 1</value>
   </data>
-  <data name="columnHeader8.Width" type="System.Int32, mscorlib">
+  <data name="columnHeader20.Width" type="System.Int32, mscorlib">
     <value>105</value>
   </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
+  <data name="columnHeader21.Text" xml:space="preserve">
     <value>Var1</value>
   </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
+  <data name="columnHeader22.Text" xml:space="preserve">
     <value>T° 2</value>
   </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
+  <data name="columnHeader23.Text" xml:space="preserve">
     <value>Var2</value>
   </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
+  <data name="columnHeader24.Text" xml:space="preserve">
     <value>Nb Data</value>
   </data>
-  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
+  <data name="columnHeader24.Width" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
-  <data name="list10Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="list10Min.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="listTempsReel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="list10Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="list10Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="listTempsReel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="list10Min.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="listTempsReel.Size" type="System.Drawing.Size, System.Drawing">
     <value>390, 204</value>
   </data>
-  <data name="list10Min.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="listTempsReel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;list10Min.Name" xml:space="preserve">
-    <value>list10Min</value>
+  <data name="&gt;&gt;listTempsReel.Name" xml:space="preserve">
+    <value>listTempsReel</value>
   </data>
-  <data name="&gt;&gt;list10Min.Type" xml:space="preserve">
+  <data name="&gt;&gt;listTempsReel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;list10Min.Parent" xml:space="preserve">
-    <value>tab10Min</value>
+  <data name="&gt;&gt;listTempsReel.Parent" xml:space="preserve">
+    <value>tabTempsReel</value>
   </data>
-  <data name="&gt;&gt;list10Min.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;listTempsReel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tab10Min.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabTempsReel.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tab10Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="tabTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
-  <data name="tab10Min.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabTempsReel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="tabTempsReel.Size" type="System.Drawing.Size, System.Drawing">
     <value>396, 210</value>
   </data>
-  <data name="tab10Min.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tabTempsReel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="tab10Min.Text" xml:space="preserve">
-    <value>10 min</value>
+  <data name="tabTempsReel.Text" xml:space="preserve">
+    <value>Temps Réel</value>
   </data>
-  <data name="&gt;&gt;tab10Min.Name" xml:space="preserve">
-    <value>tab10Min</value>
+  <data name="&gt;&gt;tabTempsReel.Name" xml:space="preserve">
+    <value>tabTempsReel</value>
   </data>
-  <data name="&gt;&gt;tab10Min.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabTempsReel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tab10Min.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabTempsReel.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tab10Min.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;tabTempsReel.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>Temps</value>
@@ -786,89 +765,167 @@
   <data name="&gt;&gt;tab1Hr.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="columnHeader19.Text" xml:space="preserve">
+  <data name="columnHeader7.Text" xml:space="preserve">
     <value>Temps</value>
   </data>
-  <data name="columnHeader20.Text" xml:space="preserve">
+  <data name="columnHeader8.Text" xml:space="preserve">
     <value>T° 1</value>
   </data>
-  <data name="columnHeader20.Width" type="System.Int32, mscorlib">
+  <data name="columnHeader8.Width" type="System.Int32, mscorlib">
     <value>105</value>
   </data>
-  <data name="columnHeader21.Text" xml:space="preserve">
+  <data name="columnHeader9.Text" xml:space="preserve">
     <value>Var1</value>
   </data>
-  <data name="columnHeader22.Text" xml:space="preserve">
+  <data name="columnHeader10.Text" xml:space="preserve">
     <value>T° 2</value>
   </data>
-  <data name="columnHeader23.Text" xml:space="preserve">
+  <data name="columnHeader11.Text" xml:space="preserve">
     <value>Var2</value>
   </data>
-  <data name="columnHeader24.Text" xml:space="preserve">
+  <data name="columnHeader12.Text" xml:space="preserve">
     <value>Nb Data</value>
   </data>
-  <data name="columnHeader24.Width" type="System.Int32, mscorlib">
+  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
     <value>77</value>
   </data>
-  <data name="listTempsReel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="list10Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="listTempsReel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
+  <data name="list10Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="listTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="list10Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="listTempsReel.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="list10Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="listTempsReel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>392, 206</value>
+  <data name="list10Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 204</value>
   </data>
-  <data name="listTempsReel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="list10Min.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;listTempsReel.Name" xml:space="preserve">
-    <value>listTempsReel</value>
+  <data name="&gt;&gt;list10Min.Name" xml:space="preserve">
+    <value>list10Min</value>
   </data>
-  <data name="&gt;&gt;listTempsReel.Type" xml:space="preserve">
+  <data name="&gt;&gt;list10Min.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;listTempsReel.Parent" xml:space="preserve">
-    <value>tabTempsReel</value>
+  <data name="&gt;&gt;list10Min.Parent" xml:space="preserve">
+    <value>tab10Min</value>
   </data>
-  <data name="&gt;&gt;listTempsReel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;list10Min.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabTempsReel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tab10Min.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="tabTempsReel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+  <data name="tab10Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="tabTempsReel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="tabTempsReel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tab10Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>396, 210</value>
   </data>
-  <data name="tabTempsReel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="tab10Min.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="tabTempsReel.Text" xml:space="preserve">
-    <value>Temps Réel</value>
+  <data name="tab10Min.Text" xml:space="preserve">
+    <value>10 min</value>
   </data>
-  <data name="&gt;&gt;tabTempsReel.Name" xml:space="preserve">
-    <value>tabTempsReel</value>
+  <data name="&gt;&gt;tab10Min.Name" xml:space="preserve">
+    <value>tab10Min</value>
   </data>
-  <data name="&gt;&gt;tabTempsReel.Type" xml:space="preserve">
+  <data name="&gt;&gt;tab10Min.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabTempsReel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tab10Min.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tabTempsReel.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;tab10Min.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Temps</value>
+  </data>
+  <data name="columnHeader14.Text" xml:space="preserve">
+    <value>T° 1</value>
+  </data>
+  <data name="columnHeader14.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="columnHeader15.Text" xml:space="preserve">
+    <value>Var1</value>
+  </data>
+  <data name="columnHeader16.Text" xml:space="preserve">
+    <value>T° 2</value>
+  </data>
+  <data name="columnHeader17.Text" xml:space="preserve">
+    <value>Var2</value>
+  </data>
+  <data name="columnHeader18.Text" xml:space="preserve">
+    <value>Nb Data</value>
+  </data>
+  <data name="columnHeader18.Width" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="list1Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="list1Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="list1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="list1Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="list1Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>390, 204</value>
+  </data>
+  <data name="list1Min.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;list1Min.Name" xml:space="preserve">
+    <value>list1Min</value>
+  </data>
+  <data name="&gt;&gt;list1Min.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;list1Min.Parent" xml:space="preserve">
+    <value>tab1Min</value>
+  </data>
+  <data name="&gt;&gt;list1Min.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tab1Min.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tab1Min.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tab1Min.Size" type="System.Drawing.Size, System.Drawing">
+    <value>396, 210</value>
+  </data>
+  <data name="tab1Min.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tab1Min.Text" xml:space="preserve">
+    <value>1 min</value>
+  </data>
+  <data name="&gt;&gt;tab1Min.Name" xml:space="preserve">
+    <value>tab1Min</value>
+  </data>
+  <data name="&gt;&gt;tab1Min.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tab1Min.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tab1Min.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>38, 164</value>
@@ -891,69 +948,6 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="timer1Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>310, 17</value>
-  </metadata>
-  <metadata name="timer10Min.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>418, 17</value>
-  </metadata>
-  <metadata name="timer1Hr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>532, 17</value>
-  </metadata>
-  <data name="baudRate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="baudRate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 36</value>
-  </data>
-  <data name="baudRate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
-  <data name="baudRate.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="baudRate.Text" xml:space="preserve">
-    <value>BaudRate</value>
-  </data>
-  <data name="&gt;&gt;baudRate.Name" xml:space="preserve">
-    <value>baudRate</value>
-  </data>
-  <data name="&gt;&gt;baudRate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;baudRate.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;baudRate.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>298, 95</value>
-  </data>
-  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 20</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>67</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="timer1Sec.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>632, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1481,76 +1475,64 @@
   <data name="&gt;&gt;timerProgressBar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Name" xml:space="preserve">
-    <value>columnHeader13</value>
+  <data name="&gt;&gt;timer1Min.Name" xml:space="preserve">
+    <value>timer1Min</value>
   </data>
-  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
+  <data name="&gt;&gt;timer1Min.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer10Min.Name" xml:space="preserve">
+    <value>timer10Min</value>
+  </data>
+  <data name="&gt;&gt;timer10Min.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer1Hr.Name" xml:space="preserve">
+    <value>timer1Hr</value>
+  </data>
+  <data name="&gt;&gt;timer1Hr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer1Sec.Name" xml:space="preserve">
+    <value>timer1Sec</value>
+  </data>
+  <data name="&gt;&gt;timer1Sec.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader19.Name" xml:space="preserve">
+    <value>columnHeader19</value>
+  </data>
+  <data name="&gt;&gt;columnHeader19.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader14.Name" xml:space="preserve">
-    <value>columnHeader14</value>
+  <data name="&gt;&gt;columnHeader20.Name" xml:space="preserve">
+    <value>columnHeader20</value>
   </data>
-  <data name="&gt;&gt;columnHeader14.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader20.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
-    <value>columnHeader15</value>
+  <data name="&gt;&gt;columnHeader21.Name" xml:space="preserve">
+    <value>columnHeader21</value>
   </data>
-  <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader21.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader16.Name" xml:space="preserve">
-    <value>columnHeader16</value>
+  <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">
+    <value>columnHeader22</value>
   </data>
-  <data name="&gt;&gt;columnHeader16.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader22.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader17.Name" xml:space="preserve">
-    <value>columnHeader17</value>
+  <data name="&gt;&gt;columnHeader23.Name" xml:space="preserve">
+    <value>columnHeader23</value>
   </data>
-  <data name="&gt;&gt;columnHeader17.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader23.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader18.Name" xml:space="preserve">
-    <value>columnHeader18</value>
+  <data name="&gt;&gt;columnHeader24.Name" xml:space="preserve">
+    <value>columnHeader24</value>
   </data>
-  <data name="&gt;&gt;columnHeader18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
-    <value>columnHeader7</value>
-  </data>
-  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
-    <value>columnHeader8</value>
-  </data>
-  <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
-    <value>columnHeader9</value>
-  </data>
-  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
-    <value>columnHeader10</value>
-  </data>
-  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
-    <value>columnHeader11</value>
-  </data>
-  <data name="&gt;&gt;columnHeader11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
-    <value>columnHeader12</value>
-  </data>
-  <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader24.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
@@ -1589,65 +1571,77 @@
   <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader19.Name" xml:space="preserve">
-    <value>columnHeader19</value>
+  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
+    <value>columnHeader7</value>
   </data>
-  <data name="&gt;&gt;columnHeader19.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader20.Name" xml:space="preserve">
-    <value>columnHeader20</value>
+  <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
+    <value>columnHeader8</value>
   </data>
-  <data name="&gt;&gt;columnHeader20.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader21.Name" xml:space="preserve">
-    <value>columnHeader21</value>
+  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
+    <value>columnHeader9</value>
   </data>
-  <data name="&gt;&gt;columnHeader21.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader22.Name" xml:space="preserve">
-    <value>columnHeader22</value>
+  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
+    <value>columnHeader10</value>
   </data>
-  <data name="&gt;&gt;columnHeader22.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Name" xml:space="preserve">
-    <value>columnHeader23</value>
+  <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
+    <value>columnHeader11</value>
   </data>
-  <data name="&gt;&gt;columnHeader23.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader11.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader24.Name" xml:space="preserve">
-    <value>columnHeader24</value>
+  <data name="&gt;&gt;columnHeader12.Name" xml:space="preserve">
+    <value>columnHeader12</value>
   </data>
-  <data name="&gt;&gt;columnHeader24.Type" xml:space="preserve">
+  <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timer1Min.Name" xml:space="preserve">
-    <value>timer1Min</value>
+  <data name="&gt;&gt;columnHeader13.Name" xml:space="preserve">
+    <value>columnHeader13</value>
   </data>
-  <data name="&gt;&gt;timer1Min.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timer10Min.Name" xml:space="preserve">
-    <value>timer10Min</value>
+  <data name="&gt;&gt;columnHeader14.Name" xml:space="preserve">
+    <value>columnHeader14</value>
   </data>
-  <data name="&gt;&gt;timer10Min.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timer1Hr.Name" xml:space="preserve">
-    <value>timer1Hr</value>
+  <data name="&gt;&gt;columnHeader15.Name" xml:space="preserve">
+    <value>columnHeader15</value>
   </data>
-  <data name="&gt;&gt;timer1Hr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;timer1Sec.Name" xml:space="preserve">
-    <value>timer1Sec</value>
+  <data name="&gt;&gt;columnHeader16.Name" xml:space="preserve">
+    <value>columnHeader16</value>
   </data>
-  <data name="&gt;&gt;timer1Sec.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader17.Name" xml:space="preserve">
+    <value>columnHeader17</value>
+  </data>
+  <data name="&gt;&gt;columnHeader17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader18.Name" xml:space="preserve">
+    <value>columnHeader18</value>
+  </data>
+  <data name="&gt;&gt;columnHeader18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>PuriSerial</value>

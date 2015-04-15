@@ -55,31 +55,12 @@ namespace SimpleSerial
             this.boutonEffacer = new System.Windows.Forms.Button();
             this.timerProgressBar = new System.Windows.Forms.Timer(this.components);
             this.choixPort = new System.Windows.Forms.ComboBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tab1Min = new System.Windows.Forms.TabPage();
-            this.list1Min = new System.Windows.Forms.ListView();
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tab10Min = new System.Windows.Forms.TabPage();
-            this.list10Min = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tab1Hr = new System.Windows.Forms.TabPage();
-            this.list1Heure = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.timer1Min = new System.Windows.Forms.Timer(this.components);
+            this.timer10Min = new System.Windows.Forms.Timer(this.components);
+            this.timer1Hr = new System.Windows.Forms.Timer(this.components);
+            this.baudRate = new System.Windows.Forms.Label();
+            this.timer1Sec = new System.Windows.Forms.Timer(this.components);
+            this.nbDonnees = new System.Windows.Forms.TextBox();
             this.tabTempsReel = new System.Windows.Forms.TabPage();
             this.listTempsReel = new System.Windows.Forms.ListView();
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -88,17 +69,36 @@ namespace SimpleSerial
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.timer1Min = new System.Windows.Forms.Timer(this.components);
-            this.timer10Min = new System.Windows.Forms.Timer(this.components);
-            this.timer1Hr = new System.Windows.Forms.Timer(this.components);
-            this.baudRate = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.timer1Sec = new System.Windows.Forms.Timer(this.components);
-            this.tabControl1.SuspendLayout();
-            this.tab1Min.SuspendLayout();
-            this.tab10Min.SuspendLayout();
-            this.tab1Hr.SuspendLayout();
+            this.tab1Hr = new System.Windows.Forms.TabPage();
+            this.list1Heure = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tab10Min = new System.Windows.Forms.TabPage();
+            this.list10Min = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tab1Min = new System.Windows.Forms.TabPage();
+            this.list1Min = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTempsReel.SuspendLayout();
+            this.tab1Hr.SuspendLayout();
+            this.tab10Min.SuspendLayout();
+            this.tab1Min.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // boutonDemarrer
@@ -228,113 +228,86 @@ namespace SimpleSerial
             this.choixPort.Name = "choixPort";
             this.choixPort.SelectedIndexChanged += new System.EventHandler(this.port_SelectedIndexChanged);
             // 
-            // tabControl1
+            // timer1Min
             // 
-            this.tabControl1.Controls.Add(this.tab1Min);
-            this.tabControl1.Controls.Add(this.tab10Min);
-            this.tabControl1.Controls.Add(this.tab1Hr);
-            this.tabControl1.Controls.Add(this.tabTempsReel);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.timer1Min.Interval = 60000;
+            this.timer1Min.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tab1Min
+            // timer10Min
             // 
-            this.tab1Min.Controls.Add(this.list1Min);
-            resources.ApplyResources(this.tab1Min, "tab1Min");
-            this.tab1Min.Name = "tab1Min";
-            this.tab1Min.UseVisualStyleBackColor = true;
+            this.timer10Min.Interval = 10000;
+            this.timer10Min.Tick += new System.EventHandler(this.timer10Min_Tick);
             // 
-            // list1Min
+            // timer1Hr
             // 
-            this.list1Min.BackColor = System.Drawing.SystemColors.Window;
-            this.list1Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15,
-            this.columnHeader16,
-            this.columnHeader17,
-            this.columnHeader18});
-            resources.ApplyResources(this.list1Min, "list1Min");
-            this.list1Min.FullRowSelect = true;
-            this.list1Min.GridLines = true;
-            this.list1Min.Name = "list1Min";
-            this.list1Min.UseCompatibleStateImageBehavior = false;
-            this.list1Min.View = System.Windows.Forms.View.Details;
-            this.list1Min.SelectedIndexChanged += new System.EventHandler(this.list1Min_SelectedIndexChanged);
+            this.timer1Hr.Interval = 3600000;
+            this.timer1Hr.Tick += new System.EventHandler(this.timer1Hr_Tick);
             // 
-            // columnHeader13
+            // baudRate
             // 
-            resources.ApplyResources(this.columnHeader13, "columnHeader13");
+            resources.ApplyResources(this.baudRate, "baudRate");
+            this.baudRate.Name = "baudRate";
+            this.baudRate.Click += new System.EventHandler(this.baudRate_Click);
             // 
-            // columnHeader14
+            // timer1Sec
             // 
-            resources.ApplyResources(this.columnHeader14, "columnHeader14");
+            this.timer1Sec.Interval = 1000;
+            this.timer1Sec.Tick += new System.EventHandler(this.timer1Sec_Tick);
             // 
-            // columnHeader15
+            // nbDonnees
             // 
-            resources.ApplyResources(this.columnHeader15, "columnHeader15");
+            resources.ApplyResources(this.nbDonnees, "nbDonnees");
+            this.nbDonnees.Name = "nbDonnees";
+            this.nbDonnees.TextChanged += new System.EventHandler(this.nbDonnees_TextChanged);
             // 
-            // columnHeader16
+            // tabTempsReel
             // 
-            resources.ApplyResources(this.columnHeader16, "columnHeader16");
+            this.tabTempsReel.Controls.Add(this.listTempsReel);
+            resources.ApplyResources(this.tabTempsReel, "tabTempsReel");
+            this.tabTempsReel.Name = "tabTempsReel";
+            this.tabTempsReel.UseVisualStyleBackColor = true;
             // 
-            // columnHeader17
+            // listTempsReel
             // 
-            resources.ApplyResources(this.columnHeader17, "columnHeader17");
+            this.listTempsReel.BackColor = System.Drawing.SystemColors.Window;
+            this.listTempsReel.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24});
+            this.listTempsReel.FullRowSelect = true;
+            this.listTempsReel.GridLines = true;
+            resources.ApplyResources(this.listTempsReel, "listTempsReel");
+            this.listTempsReel.Name = "listTempsReel";
+            this.listTempsReel.UseCompatibleStateImageBehavior = false;
+            this.listTempsReel.View = System.Windows.Forms.View.Details;
+            this.listTempsReel.SelectedIndexChanged += new System.EventHandler(this.listTempsReel_SelectedIndexChanged_1);
             // 
-            // columnHeader18
+            // columnHeader19
             // 
-            resources.ApplyResources(this.columnHeader18, "columnHeader18");
+            resources.ApplyResources(this.columnHeader19, "columnHeader19");
             // 
-            // tab10Min
+            // columnHeader20
             // 
-            this.tab10Min.Controls.Add(this.list10Min);
-            resources.ApplyResources(this.tab10Min, "tab10Min");
-            this.tab10Min.Name = "tab10Min";
-            this.tab10Min.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.columnHeader20, "columnHeader20");
             // 
-            // list10Min
+            // columnHeader21
             // 
-            this.list10Min.BackColor = System.Drawing.SystemColors.Window;
-            this.list10Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            resources.ApplyResources(this.list10Min, "list10Min");
-            this.list10Min.FullRowSelect = true;
-            this.list10Min.GridLines = true;
-            this.list10Min.Name = "list10Min";
-            this.list10Min.UseCompatibleStateImageBehavior = false;
-            this.list10Min.View = System.Windows.Forms.View.Details;
-            this.list10Min.SelectedIndexChanged += new System.EventHandler(this.list10Min_SelectedIndexChanged);
+            resources.ApplyResources(this.columnHeader21, "columnHeader21");
             // 
-            // columnHeader7
+            // columnHeader22
             // 
-            resources.ApplyResources(this.columnHeader7, "columnHeader7");
+            resources.ApplyResources(this.columnHeader22, "columnHeader22");
             // 
-            // columnHeader8
+            // columnHeader23
             // 
-            resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            resources.ApplyResources(this.columnHeader23, "columnHeader23");
             // 
-            // columnHeader9
+            // columnHeader24
             // 
-            resources.ApplyResources(this.columnHeader9, "columnHeader9");
-            // 
-            // columnHeader10
-            // 
-            resources.ApplyResources(this.columnHeader10, "columnHeader10");
-            // 
-            // columnHeader11
-            // 
-            resources.ApplyResources(this.columnHeader11, "columnHeader11");
-            // 
-            // columnHeader12
-            // 
-            resources.ApplyResources(this.columnHeader12, "columnHeader12");
+            resources.ApplyResources(this.columnHeader24, "columnHeader24");
             // 
             // tab1Hr
             // 
@@ -385,92 +358,119 @@ namespace SimpleSerial
             // 
             resources.ApplyResources(this.columnHeader6, "columnHeader6");
             // 
-            // tabTempsReel
+            // tab10Min
             // 
-            this.tabTempsReel.Controls.Add(this.listTempsReel);
-            resources.ApplyResources(this.tabTempsReel, "tabTempsReel");
-            this.tabTempsReel.Name = "tabTempsReel";
-            this.tabTempsReel.UseVisualStyleBackColor = true;
+            this.tab10Min.Controls.Add(this.list10Min);
+            resources.ApplyResources(this.tab10Min, "tab10Min");
+            this.tab10Min.Name = "tab10Min";
+            this.tab10Min.UseVisualStyleBackColor = true;
             // 
-            // listTempsReel
+            // list10Min
             // 
-            this.listTempsReel.BackColor = System.Drawing.SystemColors.Window;
-            this.listTempsReel.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader19,
-            this.columnHeader20,
-            this.columnHeader21,
-            this.columnHeader22,
-            this.columnHeader23,
-            this.columnHeader24});
-            resources.ApplyResources(this.listTempsReel, "listTempsReel");
-            this.listTempsReel.FullRowSelect = true;
-            this.listTempsReel.GridLines = true;
-            this.listTempsReel.Name = "listTempsReel";
-            this.listTempsReel.UseCompatibleStateImageBehavior = false;
-            this.listTempsReel.View = System.Windows.Forms.View.Details;
-            this.listTempsReel.SelectedIndexChanged += new System.EventHandler(this.listTempsReel_SelectedIndexChanged_1);
+            this.list10Min.BackColor = System.Drawing.SystemColors.Window;
+            this.list10Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12});
+            resources.ApplyResources(this.list10Min, "list10Min");
+            this.list10Min.FullRowSelect = true;
+            this.list10Min.GridLines = true;
+            this.list10Min.Name = "list10Min";
+            this.list10Min.UseCompatibleStateImageBehavior = false;
+            this.list10Min.View = System.Windows.Forms.View.Details;
+            this.list10Min.SelectedIndexChanged += new System.EventHandler(this.list10Min_SelectedIndexChanged);
             // 
-            // columnHeader19
+            // columnHeader7
             // 
-            resources.ApplyResources(this.columnHeader19, "columnHeader19");
+            resources.ApplyResources(this.columnHeader7, "columnHeader7");
             // 
-            // columnHeader20
+            // columnHeader8
             // 
-            resources.ApplyResources(this.columnHeader20, "columnHeader20");
+            resources.ApplyResources(this.columnHeader8, "columnHeader8");
             // 
-            // columnHeader21
+            // columnHeader9
             // 
-            resources.ApplyResources(this.columnHeader21, "columnHeader21");
+            resources.ApplyResources(this.columnHeader9, "columnHeader9");
             // 
-            // columnHeader22
+            // columnHeader10
             // 
-            resources.ApplyResources(this.columnHeader22, "columnHeader22");
+            resources.ApplyResources(this.columnHeader10, "columnHeader10");
             // 
-            // columnHeader23
+            // columnHeader11
             // 
-            resources.ApplyResources(this.columnHeader23, "columnHeader23");
+            resources.ApplyResources(this.columnHeader11, "columnHeader11");
             // 
-            // columnHeader24
+            // columnHeader12
             // 
-            resources.ApplyResources(this.columnHeader24, "columnHeader24");
+            resources.ApplyResources(this.columnHeader12, "columnHeader12");
             // 
-            // timer1Min
+            // tab1Min
             // 
-            this.timer1Min.Interval = 60000;
-            this.timer1Min.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tab1Min.Controls.Add(this.list1Min);
+            resources.ApplyResources(this.tab1Min, "tab1Min");
+            this.tab1Min.Name = "tab1Min";
+            this.tab1Min.UseVisualStyleBackColor = true;
             // 
-            // timer10Min
+            // list1Min
             // 
-            this.timer10Min.Interval = 10000;
-            this.timer10Min.Tick += new System.EventHandler(this.timer10Min_Tick);
+            this.list1Min.BackColor = System.Drawing.SystemColors.Window;
+            this.list1Min.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18});
+            resources.ApplyResources(this.list1Min, "list1Min");
+            this.list1Min.FullRowSelect = true;
+            this.list1Min.GridLines = true;
+            this.list1Min.Name = "list1Min";
+            this.list1Min.UseCompatibleStateImageBehavior = false;
+            this.list1Min.View = System.Windows.Forms.View.Details;
+            this.list1Min.SelectedIndexChanged += new System.EventHandler(this.list1Min_SelectedIndexChanged);
             // 
-            // timer1Hr
+            // columnHeader13
             // 
-            this.timer1Hr.Interval = 3600000;
-            this.timer1Hr.Tick += new System.EventHandler(this.timer1Hr_Tick);
+            resources.ApplyResources(this.columnHeader13, "columnHeader13");
             // 
-            // baudRate
+            // columnHeader14
             // 
-            resources.ApplyResources(this.baudRate, "baudRate");
-            this.baudRate.Name = "baudRate";
-            this.baudRate.Click += new System.EventHandler(this.baudRate_Click);
+            resources.ApplyResources(this.columnHeader14, "columnHeader14");
             // 
-            // textBox1
+            // columnHeader15
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            resources.ApplyResources(this.columnHeader15, "columnHeader15");
             // 
-            // timer1Sec
+            // columnHeader16
             // 
-            this.timer1Sec.Interval = 1000;
-            this.timer1Sec.Tick += new System.EventHandler(this.timer1Sec_Tick);
+            resources.ApplyResources(this.columnHeader16, "columnHeader16");
+            // 
+            // columnHeader17
+            // 
+            resources.ApplyResources(this.columnHeader17, "columnHeader17");
+            // 
+            // columnHeader18
+            // 
+            resources.ApplyResources(this.columnHeader18, "columnHeader18");
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tab1Min);
+            this.tabControl1.Controls.Add(this.tab10Min);
+            this.tabControl1.Controls.Add(this.tab1Hr);
+            this.tabControl1.Controls.Add(this.tabTempsReel);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
             // 
             // PuriSerial
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nbDonnees);
             this.Controls.Add(this.baudRate);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.choixPort);
@@ -492,11 +492,11 @@ namespace SimpleSerial
             this.Name = "PuriSerial";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.PuriSerial_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tab1Min.ResumeLayout(false);
-            this.tab10Min.ResumeLayout(false);
-            this.tab1Hr.ResumeLayout(false);
             this.tabTempsReel.ResumeLayout(false);
+            this.tab1Hr.ResumeLayout(false);
+            this.tab10Min.ResumeLayout(false);
+            this.tab1Min.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,35 +521,12 @@ namespace SimpleSerial
         private System.Windows.Forms.Button boutonEffacer;
         private System.Windows.Forms.Timer timerProgressBar;
         private System.Windows.Forms.ComboBox choixPort;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tab1Min;
-        private System.Windows.Forms.TabPage tab10Min;
-        private System.Windows.Forms.TabPage tab1Hr;
         private System.Windows.Forms.Timer timer1Min;
         private System.Windows.Forms.Timer timer10Min;
         private System.Windows.Forms.Timer timer1Hr;
         private System.Windows.Forms.Label baudRate;
-        private System.Windows.Forms.ListView list1Min;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ColumnHeader columnHeader16;
-        private System.Windows.Forms.ColumnHeader columnHeader17;
-        private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ListView list10Min;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ListView list1Heure;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.Timer timer1Sec;
+        private System.Windows.Forms.TextBox nbDonnees;
         private System.Windows.Forms.TabPage tabTempsReel;
         private System.Windows.Forms.ListView listTempsReel;
         private System.Windows.Forms.ColumnHeader columnHeader19;
@@ -558,8 +535,31 @@ namespace SimpleSerial
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Timer timer1Sec;
+        private System.Windows.Forms.TabPage tab1Hr;
+        private System.Windows.Forms.ListView list1Heure;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.TabPage tab10Min;
+        private System.Windows.Forms.ListView list10Min;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.TabPage tab1Min;
+        private System.Windows.Forms.ListView list1Min;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }
 

@@ -24,12 +24,13 @@ namespace SimpleSerial
 
     public partial class PuriSerial : Form
     {
+     
         // variable pour stocker les données
-        string RxString;
+        string data;
+        int nb=0;
 
         //path du fichier de sauvegarde
-        //string path = @"..\temp.txt";
-        string path = @"D:\Documents\GitHub\SerialPort\temp.txt";
+        string path = @"..\temp.txt";
 
         public PuriSerial()
         {
@@ -45,30 +46,16 @@ namespace SimpleSerial
         {
             if (serialPort.IsOpen) serialPort.Close();
         }
-
-        private void DisplayText(object sender, EventArgs e)
-        {
-            serialPort.Handshake = Handshake.None;
-            serialPort.DataReceived += new SerialDataReceivedEventHandler(sp_DataReceived);        
-        }
-
-
-        void sp_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-            //permet de sotckerles donnée recues dans un fichier text
-            string data = serialPort.ReadLine(); //bug lorsqu'on veut l'arrêter en plein milieux
-            StreamWriter MyStreamWriter = new StreamWriter(path, true);
-                MyStreamWriter.WriteLine(DateTime.Now.TimeOfDay);               //inscrit l'heure
-                MyStreamWriter.WriteLine(data);                                 //inscrit les data
-                MyStreamWriter.Flush();
-                MyStreamWriter.Close();
-         }
-                
         private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-            RxString = serialPort.ReadExisting();
-            this.Invoke(new EventHandler(DisplayText));
+            //inscrit les données dans un fichier de sauvegarde pour permettre le traitement
+            data = serialPort.ReadExisting();
+            StreamWriter MyStreamWriter = new StreamWriter(path, true);
+            MyStreamWriter.Write(data);
+            MyStreamWriter.Flush();
+            MyStreamWriter.Close();
         }
+
 
         private void temperature1_TextChanged(object sender, EventArgs e)
         {
@@ -139,56 +126,22 @@ namespace SimpleSerial
                 boutonDemarrer.Enabled = false;
                 boutonArret.Enabled = true;
             }
-
-            //Pour mettre les éléments dans la liste 1 minutes
-            ListViewItem uneMin = new ListViewItem("temps"); //temps
-            uneMin.SubItems.Add("température");              //temperature 1
-            uneMin.SubItems.Add("var");                      //variation
-            uneMin.SubItems.Add("t2");                       //temperature 2
-            uneMin.SubItems.Add("var");                      //variation
-            uneMin.SubItems.Add("Nbdata");                   //nombre de données
-            list1Min.Items.Add(uneMin);
-
-            //Pour mettre les éléments dans la liste 10 minutes
-            ListViewItem dixMin = new ListViewItem("temps"); //temps
-            dixMin.SubItems.Add("température");              //temperature 1
-            dixMin.SubItems.Add("var");                      //variation
-            dixMin.SubItems.Add("t2");                       //temperature 2
-            dixMin.SubItems.Add("var");                      //variation
-            dixMin.SubItems.Add("Nbdata");                   //nombre de données
-            list10Min.Items.Add(dixMin);
-
-            //Pour mettre les éléments dans la liste 1 heure
-            ListViewItem uneHeure = new ListViewItem("temps"); //temps
-            uneHeure.SubItems.Add("température");              //temperature 1
-            uneHeure.SubItems.Add("var");                      //variation
-            uneHeure.SubItems.Add("t2");                       //temperature 2
-            uneHeure.SubItems.Add("var");                      //variation
-            uneHeure.SubItems.Add("Nbdata");                   //nombre de données
-            list1Heure.Items.Add(uneHeure);
- 
-            //Pour mettre les éléments dans la liste temps réel
-            ListViewItem tempsReel = new ListViewItem("temps"); //temps
-            tempsReel.SubItems.Add("température");              //temperature 1
-            tempsReel.SubItems.Add("var");                      //variation
-            tempsReel.SubItems.Add("t2");                       //temperature 2
-            tempsReel.SubItems.Add("var");                      //variation
-            tempsReel.SubItems.Add("Nbdata");                   //nombre de données
-            listTempsReel.Items.Add(tempsReel);
         }
         
         //bouton arret
         private void buttonStop_Click(object sender, EventArgs e)
         {
-            //pour arreter la barre de progression
+            //pour arreter la barre de progression et la remettre à zéro
             timerProgressBar.Stop();
+            progressBar1.Value = 0;
+            //arrêt de tout les timers
             timer1Min.Stop();
             timer10Min.Stop();
             timer1Hr.Stop();
             timer1Sec.Stop();
-            progressBar1.Value = 0;
             if (serialPort.IsOpen)
             {
+                serialPort.Close();
                 boutonDemarrer.Enabled = true;
                 boutonArret.Enabled = false;
             }
@@ -286,11 +239,6 @@ namespace SimpleSerial
 
         }
 
-        private void nbDonnees_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nPort_Click(object sender, EventArgs e)
         {
 
@@ -322,27 +270,56 @@ namespace SimpleSerial
 
         private void list1Min_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //Pour mettre les éléments dans la liste 1 minutes
+            ListViewItem uneMin = new ListViewItem("temps"); //temps
+            uneMin.SubItems.Add("température");              //temperature 1
+            uneMin.SubItems.Add("var");                      //variation
+            uneMin.SubItems.Add("t2");                       //temperature 2
+            uneMin.SubItems.Add("var");                      //variation
+            uneMin.SubItems.Add("Nbdata");                   //nombre de données
+            list1Min.Items.Add(uneMin);
         }
 
         private void list10Min_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //Pour mettre les éléments dans la liste 10 minutes
+            ListViewItem dixMin = new ListViewItem("temps"); //temps
+            dixMin.SubItems.Add("température");              //temperature 1
+            dixMin.SubItems.Add("var");                      //variation
+            dixMin.SubItems.Add("t2");                       //temperature 2
+            dixMin.SubItems.Add("var");                      //variation
+            dixMin.SubItems.Add("Nbdata");                   //nombre de données
+            list10Min.Items.Add(dixMin);
         }
 
         private void list1Heure_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Pour mettre les éléments dans la liste 1 heure
+            ListViewItem uneHeure = new ListViewItem("temps"); //temps
+            uneHeure.SubItems.Add("température");              //temperature 1
+            uneHeure.SubItems.Add("var");                      //variation
+            uneHeure.SubItems.Add("t2");                       //temperature 2
+            uneHeure.SubItems.Add("var");                      //variation
+            uneHeure.SubItems.Add("Nbdata");                   //nombre de données
+            list1Heure.Items.Add(uneHeure);
 
         }
 
         private void listTempsReel_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-
+            //Pour mettre les éléments dans la liste temps réel
+            ListViewItem tempsReel = new ListViewItem("temps"); //temps
+            tempsReel.SubItems.Add("température");              //temperature 1
+            tempsReel.SubItems.Add("var");                      //variation
+            tempsReel.SubItems.Add("t2");                       //temperature 2
+            tempsReel.SubItems.Add("var");                      //variation
+            tempsReel.SubItems.Add("Nbdata");                   //nombre de données
+            listTempsReel.Items.Add(tempsReel);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void nbDonnees_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void PuriSerial_Load(object sender, EventArgs e)

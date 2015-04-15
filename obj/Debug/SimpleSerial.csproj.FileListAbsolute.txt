@@ -39,3 +39,17 @@ D:\Documents\GitHub\SerialPort\obj\Debug\fr\SimpleSerial.resources.dll
 D:\Documents\GitHub\SerialPort\bin\Debug\da\SimpleSerial.resources.dll
 D:\Documents\GitHub\SerialPort\obj\Debug\SimpleSerial.PuriSerial.da.resources
 D:\Documents\GitHub\SerialPort\obj\Debug\da\SimpleSerial.resources.dll
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.exe
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.pdb
+D:\Desktop\SerialPort\bin\Debug\SimpleSerial.exe
+D:\Desktop\SerialPort\bin\Debug\SimpleSerial.pdb
+D:\Desktop\SerialPort\bin\Debug\da\SimpleSerial.resources.dll
+D:\Desktop\SerialPort\bin\Debug\fr\SimpleSerial.resources.dll
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.csprojResolveAssemblyReference.cache
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.PuriSerial.resources
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.Properties.Resources.resources
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.PuriSerial.da.resources
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.PuriSerial.fr.resources
+D:\Desktop\SerialPort\obj\Debug\SimpleSerial.csproj.GenerateResource.Cache
+D:\Desktop\SerialPort\obj\Debug\da\SimpleSerial.resources.dll
+D:\Desktop\SerialPort\obj\Debug\fr\SimpleSerial.resources.dll
