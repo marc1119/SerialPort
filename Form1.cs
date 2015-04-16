@@ -56,6 +56,43 @@ namespace SimpleSerial
             MyStreamWriter.Close();
         }
 
+        private void Receive(SerialPort serialPort, bool echo, string file, int count)
+        {
+            try
+            {
+                using (FileStream fs = file == null ? null : File.Create(file))
+                {
+                    int readByte; char[] writeBuffer = new char[1];
+
+                    /* read count bytes */
+                    for (int i = 0; i < count || count == 0; i++)
+                    {
+                        readByte = serialPort.ReadByte();
+
+                        /* write the received byte to the console */
+                        Console.Write((char)readByte);
+
+                        /* dump the received byte to disk */
+                        if (fs != null)
+                        {
+                            fs.WriteByte((byte)readByte);
+                            fs.Flush();
+                        }
+
+                        /* echo the byte back to sender */
+                        if (echo)
+                        {
+                            writeBuffer[0] = (char)readByte;
+                            serialPort.Write(writeBuffer, 0, 1);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(string.Format("The following error occurred while trying to use SerialPort '{0}':{1}{2}", serialPort.PortName, Environment.NewLine, ex));
+            }
+        }
 
         private void temperature1_TextChanged(object sender, EventArgs e)
         {
