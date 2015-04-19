@@ -1,7 +1,0 @@
-Temperature_1=0.00
-Temperature_2=0.50
-Temperature_1=0.50
-Temperature_2=2.02
-Temperature_1=0.50
-Temperature_2=0.00
-
