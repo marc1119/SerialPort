@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2015-04-20 17:44:33
 Temperature_1=12.16
 Temperature_2=15.20
@@ -9,4 +10,9 @@ Temperature_1=7.09
 2015-04-20 17:44:43
 Temperature_1=12.16
 Temperature_2=11.14
+=======
+2015-04-19 20:02:46
+Temperature_1=1.52
+Temperature_2=8.10
+>>>>>>> origin/master
 
