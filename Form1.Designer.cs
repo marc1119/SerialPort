@@ -1,6 +1,6 @@
 /*
 Author: Marc-Antoine Beaudoin
-Date: 2015-04-09
+Date: 2015-04-19
 Ville: Sherbrooke
 Version: 1.00
 Id: Form1.Designer.cs
@@ -93,12 +93,15 @@ namespace SimpleSerial
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.debug = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabTempsReel.SuspendLayout();
             this.tab1Hr.SuspendLayout();
             this.tab10Min.SuspendLayout();
             this.tab1Min.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.debug.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // boutonDemarrer
@@ -256,6 +259,7 @@ namespace SimpleSerial
             // 
             // nbDonnees
             // 
+            this.nbDonnees.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this.nbDonnees, "nbDonnees");
             this.nbDonnees.Name = "nbDonnees";
             this.nbDonnees.TextChanged += new System.EventHandler(this.nbDonnees_TextChanged);
@@ -456,15 +460,30 @@ namespace SimpleSerial
             // 
             resources.ApplyResources(this.columnHeader18, "columnHeader18");
             // 
-            // tabControl1
+            // debug
             // 
-            this.tabControl1.Controls.Add(this.tab1Min);
-            this.tabControl1.Controls.Add(this.tab10Min);
-            this.tabControl1.Controls.Add(this.tab1Hr);
-            this.tabControl1.Controls.Add(this.tabTempsReel);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.debug.Controls.Add(this.tab1Min);
+            this.debug.Controls.Add(this.tab10Min);
+            this.debug.Controls.Add(this.tab1Hr);
+            this.debug.Controls.Add(this.tabTempsReel);
+            this.debug.Controls.Add(this.tabPage1);
+            resources.ApplyResources(this.debug, "debug");
+            this.debug.Name = "debug";
+            this.debug.SelectedIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.textBox1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(this.textBox1, "textBox1");
+            this.textBox1.Name = "textBox1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // PuriSerial
             // 
@@ -472,7 +491,7 @@ namespace SimpleSerial
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.nbDonnees);
             this.Controls.Add(this.baudRate);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.debug);
             this.Controls.Add(this.choixPort);
             this.Controls.Add(this.boutonQuitter);
             this.Controls.Add(this.boutonEffacer);
@@ -496,7 +515,9 @@ namespace SimpleSerial
             this.tab1Hr.ResumeLayout(false);
             this.tab10Min.ResumeLayout(false);
             this.tab1Min.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.debug.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,7 +580,9 @@ namespace SimpleSerial
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl debug;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

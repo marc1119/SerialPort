@@ -1,0 +1,12 @@
+2015-04-20 17:44:33
+Temperature_1=12.16
+Temperature_2=15.20
+
+2015-04-20 17:44:38
+Temperature_1=7.09
+Temperature_2=11.65
+
+2015-04-20 17:44:43
+Temperature_1=12.16
+Temperature_2=11.14
+
