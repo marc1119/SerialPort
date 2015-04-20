@@ -1,0 +1,4 @@
+2015-04-19 20:02:46
+Temperature_1=1.52
+Temperature_2=8.10
+
