@@ -1,44 +1,0 @@
-2015-04-19 19:35:36
-Temperature_1=15.20
-Temperature_2=20.27
-
-2015-04-19 19:35:41
-Temperature_1=14.69
-Temperature_2=20.27
-
-2015-04-19 19:35:46
-Temperature_1=11.65
-Temperature_2=17.23
-
-2015-04-19 19:35:51
-Temperature_1=11.65
-Temperature_2=15.71
-
-2015-04-19 19:35:57
-Temperature_1=13.17
-Temperature_2=15.71
-
-2015-04-19 19:36:02
-Temperature_1=11.65
-Temperature_2=15.71
-
-2015-04-19 19:36:07
-Temperature_1=13.68
-Temperature_2=16.21
-
-2015-04-19 19:36:12
-Temperature_1=11.65
-Temperature_2=15.20
-
-2015-04-19 19:36:18
-Temperature_1=10.64
-Temperature_2=13.68
-
-2015-04-19 19:36:23
-Temperature_1=14.18
-Temperature_2=11.65
-
-2015-04-19 19:36:28
-Temperature_1=9.62
-Temperature_2=15.20
-

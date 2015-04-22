@@ -6,3 +6,11 @@ D:\Desktop\SerialPort\obj\Debug\SimpleSerial.Properties.Resources.resources
 D:\Desktop\SerialPort\obj\Debug\PuriSerial.csproj.GenerateResource.Cache
 D:\Desktop\SerialPort\bin\Debug\SimpleSerial.exe
 D:\Desktop\SerialPort\bin\Debug\SimpleSerial.pdb
+D:\Desktop\Final\obj\Debug\SimpleSerial.exe
+D:\Desktop\Final\obj\Debug\SimpleSerial.pdb
+D:\Desktop\Final\obj\Debug\PuriSerial.csprojResolveAssemblyReference.cache
+D:\Desktop\Final\obj\Debug\SimpleSerial.PuriSerial.resources
+D:\Desktop\Final\obj\Debug\SimpleSerial.Properties.Resources.resources
+D:\Desktop\Final\obj\Debug\PuriSerial.csproj.GenerateResource.Cache
+D:\Desktop\Final\bin\Debug\SimpleSerial.exe
+D:\Desktop\Final\bin\Debug\SimpleSerial.pdb

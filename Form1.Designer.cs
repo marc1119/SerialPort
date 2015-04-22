@@ -59,7 +59,6 @@ namespace SimpleSerial
             this.timer10Min = new System.Windows.Forms.Timer(this.components);
             this.timer1Hr = new System.Windows.Forms.Timer(this.components);
             this.baudRate = new System.Windows.Forms.Label();
-            this.timer1Sec = new System.Windows.Forms.Timer(this.components);
             this.nbDonnees = new System.Windows.Forms.TextBox();
             this.tabTempsReel = new System.Windows.Forms.TabPage();
             this.listTempsReel = new System.Windows.Forms.ListView();
@@ -94,14 +93,11 @@ namespace SimpleSerial
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.debug = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabTempsReel.SuspendLayout();
             this.tab1Hr.SuspendLayout();
             this.tab10Min.SuspendLayout();
             this.tab1Min.SuspendLayout();
             this.debug.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // boutonDemarrer
@@ -238,7 +234,7 @@ namespace SimpleSerial
             // 
             // timer10Min
             // 
-            this.timer10Min.Interval = 10000;
+            this.timer10Min.Interval = 600000;
             this.timer10Min.Tick += new System.EventHandler(this.timer10Min_Tick);
             // 
             // timer1Hr
@@ -251,11 +247,6 @@ namespace SimpleSerial
             resources.ApplyResources(this.baudRate, "baudRate");
             this.baudRate.Name = "baudRate";
             this.baudRate.Click += new System.EventHandler(this.baudRate_Click);
-            // 
-            // timer1Sec
-            // 
-            this.timer1Sec.Interval = 1000;
-            this.timer1Sec.Tick += new System.EventHandler(this.timer1Sec_Tick);
             // 
             // nbDonnees
             // 
@@ -466,24 +457,9 @@ namespace SimpleSerial
             this.debug.Controls.Add(this.tab10Min);
             this.debug.Controls.Add(this.tab1Hr);
             this.debug.Controls.Add(this.tabTempsReel);
-            this.debug.Controls.Add(this.tabPage1);
             resources.ApplyResources(this.debug, "debug");
             this.debug.Name = "debug";
             this.debug.SelectedIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.textBox1);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // PuriSerial
             // 
@@ -516,8 +492,6 @@ namespace SimpleSerial
             this.tab10Min.ResumeLayout(false);
             this.tab1Min.ResumeLayout(false);
             this.debug.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,7 +520,6 @@ namespace SimpleSerial
         private System.Windows.Forms.Timer timer10Min;
         private System.Windows.Forms.Timer timer1Hr;
         private System.Windows.Forms.Label baudRate;
-        private System.Windows.Forms.Timer timer1Sec;
         private System.Windows.Forms.TextBox nbDonnees;
         private System.Windows.Forms.TabPage tabTempsReel;
         private System.Windows.Forms.ListView listTempsReel;
@@ -581,8 +554,6 @@ namespace SimpleSerial
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.TabControl debug;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

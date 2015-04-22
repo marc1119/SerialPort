@@ -1,6 +1,6 @@
 /*
 Author: Marc-Antoine Beaudoin
-Date: 2015-04-09
+Date: 2015-04-21
 Ville: Sherbrooke
 Version: 1.00
 Id: Form1.cs
@@ -27,39 +27,36 @@ namespace SimpleSerial
 
         // variables du programme
 #region variables
-<<<<<<< HEAD
-        string data="";                        //sert a stocker les donnees lues
-        string gauche="";                      //partie gauche de la string de temperature
-        string droite = "";                    //partie droite de la string de temperature
-        string temperatureData_1 = "";         //sert a inscrire les temperatures 1 lues dans le tableau
-        string temperatureData_2 = "";         //sert a inscrire les temperatures 2 lues dans le tableau
-        string path = @"..\sauvegarde.txt";    //path du fichier de sauvegarde
-        string varTempsReel_1 = "";              //sert a afficher la variation de temperature 1
-        string varTempsReel_2 = "";            //sert a afficher la variation de temperature 2
-        int compteur = 0;                      //sert a compter le nombre de donnees
-        double tempIni_1 = 0;                  //defini que la temperature de reference pour le calcul de variation est de 0 celsius
-        double tempIni_2 = 0;                  //defini que la temperature de reference pour le calcul de variation est de 0 celsius
+        string path = @"..\sauvegarde.txt";         //path du fichier de sauvegarde
+        string data="";                             //sert a stocker les donnees lues
+        string gauche="";                           //partie gauche de la string de temperature
+        string droite = "";                         //partie droite de la string de temperature
+        string temperatureData_1 = "";              //sert a inscrire les temperatures 1 lues dans le tableau
+        string temperatureData_2 = "";              //sert a inscrire les temperatures 2 lues dans le tableau
+        
+        string varTempsReel_1 = "";                 //variation temperature_1  en temps reel
+        string varTempsReel_2 = "";                 //variation temperature_2  en temps reel
+        string var1Min_1 = "";                      //variation temperature_1  a chaque minutes
+        string var1Min_2 = "";                      //variation temperature_2  a chaque minutes
+        string var10Min_1 = "";                     //variation temperature_1  a chaque 10 minutes
+        string var10Min_2 = "";                     //variation temperature_2  a chaque 10 minutes
+        string var1Hr_1 = "";                       //variation temperature_1  a chaque heure
+        string var1Hr_2 = "";                       //variation temperature_1  a chaque heure
 
-=======
-<<<<<<< HEAD
-        string data="";                        //sert à stocker les donnees lues
-        string gauche="";                      //partie gauche de la string de température
-        string droite = "";                    //partie droite de la string de température
-        string temperatureData_1 = "";         //sert à inscrire les températures 1 lues dans le tableau
-        string temperatureData_2 = "";         //sert à inscrire les températures 2 lues dans le tableau
-        string path = @"..\sauvegarde.txt";    //path du fichier de sauvegarde
-        int compteur = 0;                      //sert à compter le nombre de données
-=======
-        string data="";                         // set à stocker les donnees lues
-        string test="";                         //Pour identifier si temperature 1 ou 2
-        string temp_2 = "Temperature_1";        //string pour la comparaison
-        string temp_1 = "Temperature_2";        //string pour la comparaison
-        string temperatureData_1 = "0";          //sert à inscrire les températures 1 lues dans le tableau
-        string temperatureData_2 = "0";          //sert à inscrire les températures 2 lues dans le tableau
-        string path = @"..\temp.txt";           //path du fichier de sauvegarde
-        int compteur = 0;                       //sert à compter le nombre de données
->>>>>>> origin/master
->>>>>>> origin/master
+        int compteur = 0;                           //sert a compter le nombre de donnees totales et temps reel
+        int compteur1Min = 0;                       //sert a compter le nombre de donnees pour 1 minutes
+        int compteur10Min = 0;                      //sert a compter le nombre de donnees pour 10 minutes
+        int compteur1Hr = 0;                        //sert a compter le nombre de donnees pour 1 heure
+
+        double tempIni_1 = 0.00;                    //defini la temperature 1 de reference pour le calcul de variation temps reel
+        double tempIni_2 = 0.00;                    //defini la temperature 2 de reference pour le calcul de variation temps reel
+        double tempIni1Min_1 = 0.00;                //defini la temperature 1 de reference pour le calcul de variation 1 minute
+        double tempIni1Min_2 = 0.00;                //defini la temperature 2 de reference pour le calcul de variation 1 minute
+        double tempIni10Min_1 = 0.00;               //defini la temperature 1 de reference pour le calcul de variation 10 minute
+        double tempIni10Min_2 = 0.00;               //defini la temperature 2 de reference pour le calcul de variation 10 minute
+        double tempIni1Hr_1 = 0.00;                 //defini la temperature 1 de reference pour le calcul de variation 1 heure
+        double tempIni1Hr_2 = 0.00;                 //defini la temperature 2 de reference pour le calcul de variation 1 heure
+
 #endregion 
 
 
@@ -75,19 +72,14 @@ namespace SimpleSerial
         
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (serialPort.IsOpen) serialPort.Close();
+            if (serialPort.IsOpen)
+            {
+                serialPort.Close();
+            }
         }
         private void serialPort_DataReceived(object sender, System.IO.Ports.SerialDataReceivedEventArgs e)
         {
-<<<<<<< HEAD
             //Permet d'inscrire les donnees dans un fichier texte, soit l'heure et la temperature
-=======
-<<<<<<< HEAD
-            //Permet d'inscrire les donnees dans un fichier texte, soit l'heure et la température
-=======
-            //Permet d'inscrire les donnees dans un fichier text pour le debug
->>>>>>> origin/master
->>>>>>> origin/master
             Thread.Sleep(300);
             data = serialPort.ReadExisting();
             StreamWriter MyStreamWriter = new StreamWriter(path, true);
@@ -102,10 +94,6 @@ namespace SimpleSerial
 
         private void triData(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
             //pour diviser le buffer en deux strings, soit temperature 1 et temperature 2
             gauche = data.Substring(0, data.Length/2);
             droite = data.Substring(gauche.Length);
@@ -113,63 +101,18 @@ namespace SimpleSerial
             this.Invoke(new EventHandler(temperature_2));
             this.Invoke(new EventHandler(DisplayText));
             this.Invoke(new EventHandler(listTempsReel_SelectedIndexChanged_1));
-<<<<<<< HEAD
-=======
-=======
-            
-            //Pour determiner si temperature 1 ou 2
-            test = data.Substring(0, 13); //je dois déterminer comment attendre qu'il rentre la chaine au complet avant de la lire, sinon, ça bug.
-
-            if (String.ReferenceEquals(test, temp_1))
-            {
-                this.Invoke(new EventHandler(temperature_1));
-            }
-            else if (String.ReferenceEquals(test, temp_2))
-            {
-                this.Invoke(new EventHandler(temperature_2));
-            }
-            this.Invoke(new EventHandler(DisplayText));
->>>>>>> origin/master
->>>>>>> origin/master
         }
         
         private void temperature_1(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             temperatureData_1 = gauche.Substring(14); //sert a enlever temperature_1= de la chaine pour ne garder que les chiffres
-=======
-<<<<<<< HEAD
-            temperatureData_1 = gauche.Substring(14); //sert à enlever temperature_1= de la chaine pour ne garder que les chiffres
-=======
-            temperatureData_1 = data.Substring(14, 3); //sert à enlever temperature_1= de la chaine pour ne garder que les chiffres
-            this.Invoke(new EventHandler(listTempsReel_SelectedIndexChanged_1)); //envois les valeurs au tableau
->>>>>>> origin/master
->>>>>>> origin/master
         }
 
         private void temperature_2(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             temperatureData_2 = droite.Substring(14); //sert a enlever temperature_2= de la chaine pour ne garder que les chiffres
-=======
-<<<<<<< HEAD
-            temperatureData_2 = droite.Substring(14); //sert à enlever temperature_2= de la chaine pour ne garder que les chiffres
-=======
-            temperatureData_2 = data.Substring(14); //sert à enlever temperature_2= de la chaine pour ne garder que les chiffres
-            this.Invoke(new EventHandler(listTempsReel_SelectedIndexChanged_1)); //envois les valeurs au tableau
->>>>>>> origin/master
->>>>>>> origin/master
-        }
-            
-        private void temperature1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
-        private void temperature2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 #endregion
 
 #region boutons
@@ -211,25 +154,11 @@ namespace SimpleSerial
                         return;
                     }
                     else
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/master
                         this.Invoke(new EventHandler(TimerStart));
                         serialPort.PortName = choixPort.Text.ToString();
                         serialPort.BaudRate = Convert.ToInt32(choixBaurate.Text);
                         serialPort.DataBits = Convert.ToInt16(choixDataBits.Text);
                         serialPort.Open();
-<<<<<<< HEAD
-=======
-=======
-            this.Invoke(new EventHandler(TimerStart));
-            serialPort.PortName = choixPort.Text.ToString();
-            serialPort.BaudRate = Convert.ToInt32(choixBaurate.Text);
-            serialPort.DataBits = Convert.ToInt16(choixDataBits.Text);
-            serialPort.Open();
->>>>>>> origin/master
->>>>>>> origin/master
 
             if (serialPort.IsOpen)
             {
@@ -244,11 +173,11 @@ namespace SimpleSerial
             //pour arreter la barre de progression et la remettre a zero
             timerProgressBar.Stop();
             progressBar1.Value = 0;
+
             //arret de tout les timers
             timer1Min.Stop();
             timer10Min.Stop();
             timer1Hr.Stop();
-            timer1Sec.Stop();
             if (serialPort.IsOpen)
             {
                 serialPort.Close();
@@ -260,7 +189,6 @@ namespace SimpleSerial
         //bouton effacer
         private void effacer_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
             temperature1.Clear();
             temperature2.Clear();
             nbDonnees.Clear();
@@ -290,21 +218,16 @@ namespace SimpleSerial
         //Les timers
         private void TimerStart(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             //Demarer les timers qui vont synchro le projet
-=======
-            //Démarer les timers qui vont synchro le projet
->>>>>>> origin/master
             timerProgressBar.Start();
             timer1Min.Start();
             timer10Min.Start();
             timer1Hr.Start();
-            timer1Sec.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-         //Pour la barre de progression et le timer
+            //Pour la barre de progression et le timer
             progressBar1.Minimum = 0;
             progressBar1.Maximum = 120;
             progressBar1.Step = 3;
@@ -320,6 +243,7 @@ namespace SimpleSerial
         private void timer1_Tick(object sender, EventArgs e)
         {
             //Pour 1 minutes
+            this.Invoke(new EventHandler(list1Min_SelectedIndexChanged));
             timer1Min.Stop();
             timer1Min.Start();
         }
@@ -327,6 +251,7 @@ namespace SimpleSerial
         private void timer10Min_Tick(object sender, EventArgs e)
         {
             //Pour 10 minutes
+            this.Invoke(new EventHandler(list10Min_SelectedIndexChanged));
             timer10Min.Stop();
             timer10Min.Start();
         }
@@ -334,6 +259,7 @@ namespace SimpleSerial
         private void timer1Hr_Tick(object sender, EventArgs e)
         {
             //Pour 1 heure
+            this.Invoke(new EventHandler(list1Heure_SelectedIndexChanged));
             timer1Min.Stop();
             timer1Min.Start();
         }
@@ -395,158 +321,91 @@ namespace SimpleSerial
 #endregion
 
 #region Affichage
-<<<<<<< HEAD
         //Pour les listes pour l'affichage des donnees
 
         private void list1Min_SelectedIndexChanged(object sender, EventArgs e)
         {
             //pour calculer la variation de la temperature 1
-            varTempsReel_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni_1).ToString();
+            var1Min_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni1Min_1).ToString("0.##");
 
             //pour calculer la variation de la temperature 2
-            varTempsReel_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni_2).ToString();
+            var1Min_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni1Min_2).ToString("0.##");
 
             //Pour mettre les elements dans la liste 1 minutes
-            ListViewItem uneMin = new ListViewItem(DateTime.Now.ToLongTimeString());        //temps
-            uneMin.SubItems.Add(temperatureData_1.Replace('.', ','));                       //temperature 1
-            uneMin.SubItems.Add("var");                                                     //variation
-            uneMin.SubItems.Add(temperatureData_2.Replace('.', ','));                       //temperature 2
-            uneMin.SubItems.Add("var");                                                     //variation
-            uneMin.SubItems.Add(compteur.ToString());                                       //nombre de donnees
-=======
-        //Pour les listes pour l'affichage des données
-
-        private void list1Min_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Pour mettre les éléments dans la liste 1 minutes
-            ListViewItem uneMin = new ListViewItem(DateTime.Now.ToLongTimeString()); //temps
-            uneMin.SubItems.Add(temperatureData_1);                                  //temperature 1
-            uneMin.SubItems.Add("var");                                              //variation
-            uneMin.SubItems.Add(temperatureData_2);                                  //temperature 2
-            uneMin.SubItems.Add("var");                                              //variation
-            uneMin.SubItems.Add(compteur.ToString());                                //nombre de données
->>>>>>> origin/master
+            compteur1Min = compteur1Min + 1;
+            ListViewItem uneMin = new ListViewItem(DateTime.Now.ToLongTimeString());            //temps
+            uneMin.SubItems.Add(temperatureData_1);                                             //temperature 1
+            uneMin.SubItems.Add(var1Min_1.Replace(',', '.'));                                   //variation
+            uneMin.SubItems.Add(temperatureData_2);                                             //temperature 2
+            uneMin.SubItems.Add(var1Min_2.Replace(',', '.'));                                   //variation
+            uneMin.SubItems.Add(compteur1Min.ToString());                                       //nombre de donnees
             list1Min.Items.Add(uneMin);
 
-            tempIni_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
-            tempIni_2 = Convert.ToDouble(temperatureData_2.Replace('.', ','));
+            tempIni1Min_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
+            tempIni1Min_2 = Convert.ToDouble(temperatureData_2.Replace('.', ','));
         }
 
         private void list10Min_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             //pour calculer la variation de la temperature 1
-            varTempsReel_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni_1).ToString();
+            var10Min_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni10Min_1).ToString("0.##");
 
             //pour calculer la variation de la temperature 2
-            varTempsReel_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni_2).ToString();
+            var10Min_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni10Min_2).ToString("0.##");
 
             //Pour mettre les elements dans la liste 10 minutes
-            ListViewItem dixMin = new ListViewItem(DateTime.Now.ToLongTimeString());        //temps
-            dixMin.SubItems.Add(temperatureData_1.Replace('.', ','));                       //temperature 1
-            dixMin.SubItems.Add(varTempsReel_1);                                            //variation
-            dixMin.SubItems.Add(temperatureData_2.Replace('.', ','));                       //temperature 2
-            dixMin.SubItems.Add(varTempsReel_2);                                            //variation
-            dixMin.SubItems.Add(compteur.ToString());                                       //nombre de donnees
-=======
-            //Pour mettre les éléments dans la liste 10 minutes
-<<<<<<< HEAD
-            ListViewItem dixMin = new ListViewItem(DateTime.Now.ToLongTimeString()); //temps
-            dixMin.SubItems.Add(temperatureData_1);                                  //temperature 1
-            dixMin.SubItems.Add("var");                                              //variation
-            dixMin.SubItems.Add(temperatureData_2);                                  //temperature 2
-            dixMin.SubItems.Add("var");                                              //variation
-            dixMin.SubItems.Add(compteur.ToString());                                //nombre de données
-=======
-            ListViewItem dixMin = new ListViewItem("temps"); //temps
-            dixMin.SubItems.Add("t1");                       //temperature 1
-            dixMin.SubItems.Add("var");                      //variation
-            dixMin.SubItems.Add("t2");                       //temperature 2
-            dixMin.SubItems.Add("var");                      //variation
-            dixMin.SubItems.Add("Nbdata");                   //nombre de données
->>>>>>> origin/master
->>>>>>> origin/master
+
+            compteur10Min = compteur10Min + 1;
+            ListViewItem dixMin = new ListViewItem(DateTime.Now.ToLongTimeString());            //temps
+            dixMin.SubItems.Add(temperatureData_1);                                             //temperature 1
+            dixMin.SubItems.Add(var10Min_1.Replace(',', '.'));                                  //variation
+            dixMin.SubItems.Add(temperatureData_2);                                             //temperature 2
+            dixMin.SubItems.Add(var10Min_2.Replace(',', '.'));                                  //variation
+            dixMin.SubItems.Add(compteur10Min.ToString());                                      //nombre de donnees
             list10Min.Items.Add(dixMin);
 
-            tempIni_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
-            tempIni_2 = Convert.ToDouble(temperatureData_2.Replace('.', ','));
+            tempIni10Min_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
+            tempIni10Min_2 = Convert.ToDouble(temperatureData_2.Replace('.', ','));
         }
 
         private void list1Heure_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             //pour calculer la variation de la temperature 1
-            varTempsReel_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni_1).ToString();
+            var1Hr_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni1Hr_1).ToString("0.##");
 
             //pour calculer la variation de la temperature 2
-            varTempsReel_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni_2).ToString();
+            var1Hr_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni1Hr_2).ToString("0.##");
 
             //Pour mettre les elements dans la liste 1 heure
-            ListViewItem uneHeure = new ListViewItem(DateTime.Now.ToLongTimeString());       //temps
-            uneHeure.SubItems.Add(temperatureData_1.Replace('.', ','));                      //temperature 1
-            uneHeure.SubItems.Add(varTempsReel_1);                                           //variation
-            uneHeure.SubItems.Add(temperatureData_2.Replace('.', ','));                      //temperature 2
-            uneHeure.SubItems.Add(varTempsReel_2);                                           //variation
-            uneHeure.SubItems.Add(compteur.ToString());                                      //nombre de donnees
+
+            compteur1Hr = compteur1Hr + 1;
+            ListViewItem uneHeure = new ListViewItem(DateTime.Now.ToLongTimeString());          //temps
+            uneHeure.SubItems.Add(temperatureData_1);                                           //temperature 1
+            uneHeure.SubItems.Add(var1Hr_1.Replace(',', '.'));                                  //variation 1
+            uneHeure.SubItems.Add(temperatureData_2);                                           //temperature 2
+            uneHeure.SubItems.Add(var1Hr_2.Replace(',', '.'));                                  //variation 2
+            uneHeure.SubItems.Add(compteur1Hr.ToString());                                      //nombre de donnees
             list1Heure.Items.Add(uneHeure);
 
-            tempIni_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
-            tempIni_2 = Convert.ToDouble(temperatureData_2.Replace('.', ','));
-=======
-            //Pour mettre les éléments dans la liste 1 heure
-<<<<<<< HEAD
-            ListViewItem uneHeure = new ListViewItem(DateTime.Now.ToLongTimeString()); //temps
-            uneHeure.SubItems.Add(temperatureData_1);                                  //temperature 1
-            uneHeure.SubItems.Add("var");                                              //variation
-            uneHeure.SubItems.Add(temperatureData_2);                                  //temperature 2
-            uneHeure.SubItems.Add("var");                                              //variation
-            uneHeure.SubItems.Add(compteur.ToString());                                //nombre de données
-=======
-            ListViewItem uneHeure = new ListViewItem("temps"); //temps
-            uneHeure.SubItems.Add("t1");                        //temperature 1
-            uneHeure.SubItems.Add("var");                      //variation
-            uneHeure.SubItems.Add("t2");                       //temperature 2
-            uneHeure.SubItems.Add("var");                      //variation
-            uneHeure.SubItems.Add("Nbdata");                   //nombre de données
->>>>>>> origin/master
-            list1Heure.Items.Add(uneHeure);
->>>>>>> origin/master
+            tempIni1Hr_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
+            tempIni1Hr_2 = Convert.ToDouble(temperatureData_2.Replace('.', ','));
         }
 
         private void listTempsReel_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             //pour calculer la variation de la temperature 1
-            varTempsReel_1 = (Convert.ToDouble(temperatureData_1.Replace('.',','))- tempIni_1).ToString();
+            varTempsReel_1 = (Convert.ToDouble(temperatureData_1.Replace('.', ',')) - tempIni_1).ToString("0.##");
 
             //pour calculer la variation de la temperature 2
-            varTempsReel_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni_2).ToString();
+            varTempsReel_2 = (Convert.ToDouble(temperatureData_2.Replace('.', ',')) - tempIni_2).ToString("0.##");
 
             //Pour mettre les elements dans la liste temps reel
-            ListViewItem tempsReel = new ListViewItem(DateTime.Now.ToLongTimeString().Replace('.', ',')); //temps
-            tempsReel.SubItems.Add(temperatureData_1.Replace('.', ','));                                  //temperature 1
-            tempsReel.SubItems.Add(varTempsReel_1);                                     //variation
-            tempsReel.SubItems.Add(temperatureData_2.Replace('.', ','));                                  //temperature 2
-            tempsReel.SubItems.Add(varTempsReel_2);                                     //variation
-            tempsReel.SubItems.Add(compteur.ToString());                                //nombre de donnees
-=======
-            //Pour mettre les éléments dans la liste temps réel
-<<<<<<< HEAD
-            ListViewItem tempsReel = new ListViewItem(DateTime.Now.ToLongTimeString()); //temps
-            tempsReel.SubItems.Add(temperatureData_1);                                  //temperature 1
-            tempsReel.SubItems.Add("var");                                              //variation
-            tempsReel.SubItems.Add(temperatureData_2);                                  //temperature 2
-            tempsReel.SubItems.Add("var");                                              //variation
-            tempsReel.SubItems.Add(compteur.ToString());                                //nombre de données
-=======
-            ListViewItem tempsReel = new ListViewItem("temps"); //temps
-            tempsReel.SubItems.Add("t1");                        //temperature 1
-            tempsReel.SubItems.Add("var");                      //variation
-            tempsReel.SubItems.Add("t2");                       //temperature 2
-            tempsReel.SubItems.Add("var");                      //variation
-            tempsReel.SubItems.Add("Nbdata");                   //nombre de données
->>>>>>> origin/master
->>>>>>> origin/master
+            ListViewItem tempsReel = new ListViewItem(DateTime.Now.ToLongTimeString());         //temps
+            tempsReel.SubItems.Add(temperatureData_1);                                          //temperature 1
+            tempsReel.SubItems.Add(varTempsReel_1.Replace(',', '.'));                           //variation1
+            tempsReel.SubItems.Add(temperatureData_2);                                          //temperature 2
+            tempsReel.SubItems.Add(varTempsReel_2.Replace(',', '.'));                           //variation2
+            tempsReel.SubItems.Add(compteur.ToString());                                        //nombre de donnees
             listTempsReel.Items.Add(tempsReel);
             
             tempIni_1 = Convert.ToDouble(temperatureData_1.Replace('.', ','));
@@ -556,38 +415,14 @@ namespace SimpleSerial
 
         private void DisplayText(object sender, EventArgs e)
         {
-                textBox1.AppendText(data); //Pour l'affichage de l'onglet debug
                 compteur = compteur + 1;
                 temperature1.Clear();
                 temperature2.Clear();
                 nbDonnees.Clear();
+                        
                 temperature1.AppendText(temperatureData_1);     //afficher la derniere temperature 1 lue 
                 temperature2.AppendText(temperatureData_2);     //afficher la derniere temperature 2 lue 
-                nbDonnees.AppendText(compteur.ToString());
-        }
-
-        private void DisplayText(object sender, EventArgs e)
-        {
-<<<<<<< HEAD
-            textBox1.AppendText(data); //Pour l'affichage de l'onglet debug
-                compteur = compteur + 1;
-=======
-                compteur = compteur + 1;
-                textBox1.AppendText(data); //Pour l'affichage de l'onglet debug
->>>>>>> origin/master
-                temperature1.Clear();
-                temperature2.Clear();
-                nbDonnees.Clear();
-                temperature1.AppendText(temperatureData_1);     //afficher la dernière température 1 lue 
-<<<<<<< HEAD
-                temperature2.AppendText(temperatureData_2);     //afficher la dernière température 2 lue 
-                nbDonnees.AppendText(compteur.ToString());
-=======
-                temperature2.AppendText(temperatureData_1);     //afficher la dernière température 1 lue 
-                nbDonnees.AppendText(compteur.ToString());
-
-
->>>>>>> origin/master
+                nbDonnees.AppendText(compteur.ToString());      //afficher le nombre de donnees au compteur
         }
 
         private void nbDonnees_TextChanged(object sender, EventArgs e)
@@ -606,6 +441,16 @@ namespace SimpleSerial
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void temperature1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void temperature2_TextChanged(object sender, EventArgs e)
         {
 
         }

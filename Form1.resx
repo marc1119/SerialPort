@@ -578,9 +578,6 @@
   <data name="&gt;&gt;baudRate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="timer1Sec.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>632, 17</value>
-  </metadata>
   <data name="nbDonnees.Location" type="System.Drawing.Point, System.Drawing">
     <value>300, 96</value>
   </data>
@@ -640,7 +637,7 @@
     <value>No</value>
   </data>
   <data name="listTempsReel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>388, 204</value>
+    <value>390, 204</value>
   </data>
   <data name="listTempsReel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -687,48 +684,6 @@
   <data name="&gt;&gt;tabTempsReel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>Temps</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>T° 1</value>
-  </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Var1</value>
-  </data>
-  <data name="columnHeader4.Text" xml:space="preserve">
-    <value>T° 2</value>
-  </data>
-  <data name="columnHeader5.Text" xml:space="preserve">
-    <value>Var2</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Nb Data</value>
-  </data>
-  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="list1Heure.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="list1Heure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="list1Heure.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="list1Heure.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="list1Heure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
-  </data>
-  <data name="list1Heure.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="&gt;&gt;list1Heure.Name" xml:space="preserve">
     <value>list1Heure</value>
   </data>
@@ -768,47 +723,59 @@
   <data name="&gt;&gt;tab1Hr.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="columnHeader7.Text" xml:space="preserve">
-    <value>Temps</value>
-  </data>
-  <data name="columnHeader8.Text" xml:space="preserve">
-    <value>T° 1</value>
-  </data>
-  <data name="columnHeader8.Width" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="columnHeader9.Text" xml:space="preserve">
-    <value>Var1</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>T° 2</value>
-  </data>
-  <data name="columnHeader11.Text" xml:space="preserve">
-    <value>Var2</value>
-  </data>
-  <data name="columnHeader12.Text" xml:space="preserve">
-    <value>Nb Data</value>
-  </data>
-  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="list10Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="list1Heure.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="list10Min.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="list1Heure.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="list10Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="list1Heure.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="list10Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="list1Heure.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="list10Min.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="list1Heure.Size" type="System.Drawing.Size, System.Drawing">
     <value>390, 204</value>
   </data>
-  <data name="list10Min.TabIndex" type="System.Int32, mscorlib">
+  <data name="list1Heure.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;list1Heure.Name" xml:space="preserve">
+    <value>list1Heure</value>
+  </data>
+  <data name="&gt;&gt;list1Heure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;list1Heure.Parent" xml:space="preserve">
+    <value>tab1Hr</value>
+  </data>
+  <data name="&gt;&gt;list1Heure.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Temps</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>T° 1</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Var1</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>T° 2</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Var2</value>
+  </data>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Nb Data</value>
+  </data>
+  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+    <value>77</value>
   </data>
   <data name="&gt;&gt;list10Min.Name" xml:space="preserve">
     <value>list10Min</value>
@@ -849,47 +816,59 @@
   <data name="&gt;&gt;tab10Min.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="columnHeader13.Text" xml:space="preserve">
-    <value>Temps</value>
-  </data>
-  <data name="columnHeader14.Text" xml:space="preserve">
-    <value>T° 1</value>
-  </data>
-  <data name="columnHeader14.Width" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="columnHeader15.Text" xml:space="preserve">
-    <value>Var1</value>
-  </data>
-  <data name="columnHeader16.Text" xml:space="preserve">
-    <value>T° 2</value>
-  </data>
-  <data name="columnHeader17.Text" xml:space="preserve">
-    <value>Var2</value>
-  </data>
-  <data name="columnHeader18.Text" xml:space="preserve">
-    <value>Nb Data</value>
-  </data>
-  <data name="columnHeader18.Width" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="list1Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="list10Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="list1Min.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="list10Min.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="list1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="list10Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="list1Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+  <data name="list10Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
-  <data name="list1Min.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="list10Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>390, 204</value>
   </data>
-  <data name="list1Min.TabIndex" type="System.Int32, mscorlib">
+  <data name="list10Min.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;list10Min.Name" xml:space="preserve">
+    <value>list10Min</value>
+  </data>
+  <data name="&gt;&gt;list10Min.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;list10Min.Parent" xml:space="preserve">
+    <value>tab10Min</value>
+  </data>
+  <data name="&gt;&gt;list10Min.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="columnHeader7.Text" xml:space="preserve">
+    <value>Temps</value>
+  </data>
+  <data name="columnHeader8.Text" xml:space="preserve">
+    <value>T° 1</value>
+  </data>
+  <data name="columnHeader8.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="columnHeader9.Text" xml:space="preserve">
+    <value>Var1</value>
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value>T° 2</value>
+  </data>
+  <data name="columnHeader11.Text" xml:space="preserve">
+    <value>Var2</value>
+  </data>
+  <data name="columnHeader12.Text" xml:space="preserve">
+    <value>Nb Data</value>
+  </data>
+  <data name="columnHeader12.Width" type="System.Int32, mscorlib">
+    <value>77</value>
   </data>
   <data name="&gt;&gt;list1Min.Name" xml:space="preserve">
     <value>list1Min</value>
@@ -930,77 +909,62 @@
   <data name="&gt;&gt;tab1Min.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="tabPage1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="list1Min.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="list1Min.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="textBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="list1Min.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="textBox1.MaximumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="list1Min.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="list1Min.Size" type="System.Drawing.Size, System.Drawing">
     <value>390, 204</value>
   </data>
-  <data name="textBox1.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
+  <data name="list1Min.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;list1Min.Name" xml:space="preserve">
+    <value>list1Min</value>
   </data>
-  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
+  <data name="&gt;&gt;list1Min.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 204</value>
+  <data name="&gt;&gt;list1Min.Parent" xml:space="preserve">
+    <value>tab1Min</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;list1Min.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="columnHeader13.Text" xml:space="preserve">
+    <value>Temps</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="columnHeader14.Text" xml:space="preserve">
+    <value>T° 1</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="columnHeader14.Width" type="System.Int32, mscorlib">
+    <value>105</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="columnHeader15.Text" xml:space="preserve">
+    <value>Var1</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="columnHeader16.Text" xml:space="preserve">
+    <value>T° 2</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="columnHeader17.Text" xml:space="preserve">
+    <value>Var2</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>396, 210</value>
+  <data name="columnHeader18.Text" xml:space="preserve">
+    <value>Nb Data</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Debug</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>debug</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="columnHeader18.Width" type="System.Int32, mscorlib">
+    <value>77</value>
   </data>
   <data name="debug.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 164</value>
+    <value>38, 166</value>
   </data>
   <data name="debug.Size" type="System.Drawing.Size, System.Drawing">
     <value>404, 236</value>
@@ -1566,12 +1530,6 @@
     <value>timer1Hr</value>
   </data>
   <data name="&gt;&gt;timer1Hr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;timer1Sec.Name" xml:space="preserve">
-    <value>timer1Sec</value>
-  </data>
-  <data name="&gt;&gt;timer1Sec.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader19.Name" xml:space="preserve">

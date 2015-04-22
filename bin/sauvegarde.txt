@@ -1,18 +1,484 @@
-<<<<<<< HEAD
-2015-04-20 17:44:33
-Temperature_1=12.16
-Temperature_2=15.20
+2015-04-21 21:26:42
+Temperature_1=1.01
+Temperature_2=0.00
 
-2015-04-20 17:44:38
-Temperature_1=7.09
-Temperature_2=11.65
+2015-04-21 21:26:47
+Temperature_1=0.00
+Temperature_2=0.50
 
-2015-04-20 17:44:43
-Temperature_1=12.16
-Temperature_2=11.14
-=======
-2015-04-19 20:02:46
-Temperature_1=1.52
-Temperature_2=8.10
->>>>>>> origin/master
+2015-04-21 21:26:53
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:26:58
+Temperature_1=0.50
+Temperature_2=0.50
+
+2015-04-21 21:27:03
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:27:08
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:27:14
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:27:19
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:27:24
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:27:29
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:27:35
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:27:40
+Temperature_1=2.02
+Temperature_2=0.00
+
+2015-04-21 21:27:45
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:27:50
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:27:56
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:28:01
+Temperature_1=2.02
+Temperature_2=0.00
+
+2015-04-21 21:28:06
+Temperature_1=0.50
+Temperature_2=1.01
+
+2015-04-21 21:28:11
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:28:17
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:28:22
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:28:27
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:28:32
+Temperature_1=2.02
+Temperature_2=0.00
+
+2015-04-21 21:28:38
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:28:43
+Temperature_1=1.01
+Temperature_2=0.50
+
+2015-04-21 21:28:48
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:28:54
+Temperature_1=0.00
+Temperature_2=1.01
+
+2015-04-21 21:28:59
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:29:04
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:29:09
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:29:15
+Temperature_1=0.50
+Temperature_2=0.50
+
+2015-04-21 21:29:20
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:29:25
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:29:30
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:29:36
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:29:41
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:29:46
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:29:51
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:29:57
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:30:02
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:30:07
+Temperature_1=2.02
+Temperature_2=0.00
+
+2015-04-21 21:30:12
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:30:18
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:30:23
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:30:28
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:30:33
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:30:39
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:30:44
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:30:49
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:30:54
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:31:00
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:31:05
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:31:10
+Temperature_1=1.01
+Temperature_2=0.50
+
+2015-04-21 21:31:16
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:31:21
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:31:26
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:31:31
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:31:37
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:31:42
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:31:47
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:31:52
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:31:58
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:32:03
+Temperature_1=1.01
+Temperature_2=0.50
+
+2015-04-21 21:32:08
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:32:13
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:32:19
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:32:24
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:32:29
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:32:34
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:32:40
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:32:45
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:32:50
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:32:55
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:33:01
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:33:06
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:33:11
+Temperature_1=1.01
+Temperature_2=0.00
+
+2015-04-21 21:33:17
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:33:22
+Temperature_1=0.00
+Temperature_2=1.01
+
+2015-04-21 21:33:27
+Temperature_1=0.00
+Temperature_2=1.01
+
+2015-04-21 21:33:32
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:33:38
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:33:43
+Temperature_1=2.02
+Temperature_2=0.00
+
+2015-04-21 21:33:48
+Temperature_1=0.50
+Temperature_2=0.50
+
+2015-04-21 21:33:53
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:33:59
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:34:04
+Temperature_1=0.50
+Temperature_2=1.01
+
+2015-04-21 21:34:09
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:34:14
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:34:20
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:34:25
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:34:30
+Temperature_1=0.50
+Temperature_2=2.02
+
+2015-04-21 21:34:35
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:34:41
+Temperature_1=0.50
+Temperature_2=0.50
+
+2015-04-21 21:34:46
+Temperature_1=2.02
+Temperature_2=2.02
+
+2015-04-21 21:34:51
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:34:56
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:35:02
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:35:07
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:35:12
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:35:17
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:35:23
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:35:28
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:35:33
+Temperature_1=2.02
+Temperature_2=0.00
+
+2015-04-21 21:35:39
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:35:44
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:35:49
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:35:54
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:36:00
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:36:05
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:36:10
+Temperature_1=0.00
+Temperature_2=1.01
+
+2015-04-21 21:36:15
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:36:21
+Temperature_1=0.00
+Temperature_2=0.50
+
+2015-04-21 21:36:26
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:36:31
+Temperature_1=1.01
+Temperature_2=1.01
+
+2015-04-21 21:36:36
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:36:42
+Temperature_1=0.00
+Temperature_2=0.00
+
+2015-04-21 21:36:47
+Temperature_1=2.02
+Temperature_2=0.50
+
+2015-04-21 21:36:52
+Temperature_1=0.00
+Temperature_2=2.02
+
+2015-04-21 21:36:57
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:37:03
+Temperature_1=0.50
+Temperature_2=0.00
+
+2015-04-21 21:37:08
+Temperature_1=1.01
+Temperature_2=1.01
+
+2015-04-21 21:37:13
+Temperature_1=1.01
+Temperature_2=1.01
 
